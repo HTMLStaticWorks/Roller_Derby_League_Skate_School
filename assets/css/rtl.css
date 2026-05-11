@@ -1,0 +1,40 @@
+/* 
+    ROLLER DERBY LEAGUE & SKATE SCHOOL
+    RTL Support Styles
+*/
+
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .nav-links {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+[dir="rtl"] .nav-controls {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+[dir="rtl"] .footer-links ul li a:hover {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+[dir="rtl"] .btn-primary, [dir="rtl"] .btn-outline {
+    direction: rtl;
+}
+
+[dir="rtl"] .player-info {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .social-icons {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .newsletter-form {
+    flex-direction: row-reverse;
+}

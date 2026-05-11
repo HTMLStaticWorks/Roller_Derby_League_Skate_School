@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 2 | Roller Derby League & Skate School</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Home 2 Specific Styles */
+        .hero-split {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
+            background: var(--bg-dark);
+            position: relative;
+            z-index: 2;
+        }
+        .hero-right {
+            flex: 1;
+            position: relative;
+        }
+        .hero-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-right::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, var(--bg-dark), transparent);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            gap: 20px;
+        }
+        .bento-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .bento-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: var(--transition);
+        }
+        .bento-item:hover img { transform: scale(1.1); }
+        .bento-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 20px;
+            transition: var(--transition);
+        }
+        .bento-item:hover .bento-overlay { background: rgba(255, 0, 127, 0.4); }
+
+        .item-lg { grid-column: span 2; grid-row: span 2; }
+        .item-md { grid-column: span 2; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .gallery-card {
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-card img { width: 100%; height: 100%; object-fit: cover; }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .stat-item h2 { font-size: 48px; color: var(--secondary-neon); }
+        .stat-item p { color: var(--text-gray); }
+
+        @media (max-width: 1024px) {
+            .hero-split { flex-direction: column; }
+            .hero-left { padding: 40px; order: 2; height: auto; }
+            .hero-right { height: 50vh; order: 1; }
+            .bento-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+            .item-lg, .item-md { grid-column: span 2; height: 300px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-skating neon-text"></i>
+                ROLLER<span>DERBY</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="home-2.html" class="active">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Premium Hero Section -->
+    <header class="hero-split">
+        <div class="hero-left" data-reveal>
+            <h1 class="hero-title">THE <span class="neon-text">ELITE</span><br><span class="gradient-text">EXPERIENCE</span></h1>
+            <p class="hero-subtitle">Step into the most technologically advanced roller derby training ground in the world. Precision, Power, Performance.</p>
+            <div class="stats-grid">
+                <div class="stat-item"><h2>15+</h2><p>Pro Leagues</p></div>
+                <div class="stat-item"><h2>500+</h2><p>Athletes</p></div>
+                <div class="stat-item"><h2>25+</h2><p>Awards</p></div>
+            </div>
+            <div style="margin-top: 40px;">
+                <a href="#" class="btn-primary">Explore Academy</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1920" alt="Premium Skater">
+        </div>
+    </header>
+
+    <!-- 2. Skate School Experience (Bento Grid) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">SKATE SCHOOL <span class="neon-text">EXPERIENCE</span></h2>
+                <p class="section-subtitle">A multidisciplinary approach to mastering the wheels.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-item item-lg" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=800" alt="Tech">
+                    <div class="bento-overlay">
+                        <h3>Technical Mastery</h3>
+                        <p>Deep dive into the physics of skating.</p>
+                    </div>
+                </div>
+                <div class="bento-item" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1551698618-1fed5d978244?auto=format&fit=crop&q=80&w=800" alt="Arena">
+                    <div class="bento-overlay"><h3>Arena Access</h3></div>
+                </div>
+                <div class="bento-item" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1543808096-2ac8ab04aa7a?auto=format&fit=crop&q=80&w=800" alt="Community">
+                    <div class="bento-overlay"><h3>Pro Community</h3></div>
+                </div>
+                <div class="bento-item item-md" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1563299317-09d949439129?auto=format&fit=crop&q=80&w=800" alt="Nutrition">
+                    <div class="bento-overlay">
+                        <h3>Athlete Nutrition</h3>
+                        <p>Performance-driven dietary plans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Derby Gallery Showcase -->
+    <section class="section-padding" style="background: rgba(0,242,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">DERBY <span class="neon-text">GALLERY</span></h2>
+                <p class="section-subtitle">Capturing the intensity of the track.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-card glass-card" data-reveal style="padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=600" alt="Gallery 1">
+                </div>
+                <div class="gallery-card glass-card" data-reveal style="padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=600" alt="Gallery 2">
+                </div>
+                <div class="gallery-card glass-card" data-reveal style="padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600" alt="Gallery 3">
+                </div>
+                <div class="gallery-card glass-card" data-reveal style="padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=600" alt="Gallery 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Community & Events -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">JOIN THE <span class="neon-text">COMMUNITY</span></h2>
+                <p class="section-subtitle">Beyond the track, we are a family of creators and athletes.</p>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" data-reveal>
+                    <i class="fas fa-users neon-text" style="font-size: 40px; margin-bottom: 20px;"></i>
+                    <h3>Fan Meetups</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Connect with your favorite players and fellow fans every month.</p>
+                    <a href="#" class="btn-outline" style="margin-top: 20px;">View Dates</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <i class="fas fa-tools neon-text" style="font-size: 40px; margin-bottom: 20px;"></i>
+                    <h3>Gear Workshops</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Learn how to maintain and customize your skates for peak performance.</p>
+                    <a href="#" class="btn-outline" style="margin-top: 20px;">Join Workshop</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <i class="fas fa-microphone neon-text" style="font-size: 40px; margin-bottom: 20px;"></i>
+                    <h3>Player Podcasts</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Weekly insights into the lives and training of derby pros.</p>
+                    <a href="#" class="btn-outline" style="margin-top: 20px;">Listen Now</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <i class="fas fa-heart neon-text" style="font-size: 40px; margin-bottom: 20px;"></i>
+                    <h3>Charity Bouts</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Skating for a cause. Join our seasonal fundraising events.</p>
+                    <a href="#" class="btn-outline" style="margin-top: 20px;">Support Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials & Achievements -->
+    <section class="section-padding" style="background: rgba(188,19,254,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">ATHLETE <span class="neon-text">VOICES</span></h2>
+                <p class="section-subtitle">Real stories from the track.</p>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" data-reveal>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <img src="https://i.pravatar.cc/150?u=1" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div>
+                            <h4 style="margin: 0;">Sarah J.</h4>
+                            <p style="font-size: 12px; color: var(--secondary-neon);">Fresh Meat Grad</p>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"The training here is intense but incredibly rewarding. I went from zero to jammer in just six months!"</p>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <img src="https://i.pravatar.cc/150?u=2" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div>
+                            <h4 style="margin: 0;">Mike D.</h4>
+                            <p style="font-size: 12px; color: var(--secondary-neon);">Pro Blocker</p>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"Best facility in the country. The floor grip is perfect and the coaches really know their stuff."</p>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <img src="https://i.pravatar.cc/150?u=3" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div>
+                            <h4 style="margin: 0;">Elena R.</h4>
+                            <p style="font-size: 12px; color: var(--secondary-neon);">Youth Academy Parent</p>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"My daughter has found her confidence through derby. The community here is so supportive."</p>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <img src="https://i.pravatar.cc/150?u=4" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div>
+                            <h4 style="margin: 0;">Toxie</h4>
+                            <p style="font-size: 12px; color: var(--secondary-neon);">League Captain</p>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"We don't just build skaters, we build leaders. This league changed my life."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Elite Membership CTA -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="glass-card" style="padding: 80px; text-align: center; border: 2px solid var(--primary-neon); background: linear-gradient(45deg, rgba(255,0,127,0.1), rgba(0,242,255,0.1));" data-reveal>
+                <h2 style="font-size: 50px; margin-bottom: 20px;">READY TO <span class="neon-text">LEVEL UP?</span></h2>
+                <p style="max-width: 600px; margin: 0 auto 40px; color: var(--text-gray);">Join our Elite Membership today and get unlimited access to the arena, pro coaching, and exclusive league events.</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div class="glass-card" style="width: 250px; padding: 20px; border-color: var(--secondary-neon);">
+                        <h4 style="color: var(--secondary-neon);">Monthly Pass</h4>
+                        <h2 style="margin: 15px 0;">$89</h2>
+                        <ul style="list-style: none; font-size: 14px; color: var(--text-gray); margin-bottom: 20px;">
+                            <li>Unlimited Track Access</li>
+                            <li>Weekly Workshop</li>
+                        </ul>
+                        <a href="#" class="btn-primary" style="width: 100%;">Select</a>
+                    </div>
+                    <div class="glass-card" style="width: 250px; padding: 20px; border-color: var(--primary-neon); transform: scale(1.1); box-shadow: 0 0 20px var(--primary-neon);">
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-neon); padding: 5px 15px; border-radius: 20px; font-size: 10px; font-weight: 800;">MOST POPULAR</div>
+                        <h4 style="color: var(--primary-neon);">Annual Pro</h4>
+                        <h2 style="margin: 15px 0;">$799</h2>
+                        <ul style="list-style: none; font-size: 14px; color: var(--text-gray); margin-bottom: 20px;">
+                            <li>Everything in Monthly</li>
+                            <li>1-on-1 Coaching Session</li>
+                            <li>Free Jersey</li>
+                        </ul>
+                        <a href="#" class="btn-primary" style="width: 100%;">Select</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Same Footer as Index -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-skating neon-text"></i>
+                        ROLLER<span>DERBY</span>
+                    </a>
+                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition and community since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="#">Fresh Meat Basics</a></li>
+                        <li><a href="#">Tactical Derby</a></li>
+                        <li><a href="#">Fitness & Conditioning</a></li>
+                        <li><a href="#">Private Coaching</a></li>
+                        <li><a href="#">Youth Academy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Get the latest match results and training tips directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn-primary" style="padding: 12px;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roller Derby League & Skate School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

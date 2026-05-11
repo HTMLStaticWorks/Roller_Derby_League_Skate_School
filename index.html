@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 1 | Roller Derby League & Skate School</title>
+    <meta name="description" content="Premium Sports League + Skate Training Academy. Join the ultimate Roller Derby community.">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode"> <!-- Defaulting to dark mode for neon vibe -->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-skating neon-text"></i>
+                ROLLER<span>DERBY</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home 1</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="toggle-btn" id="dark-mode-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="toggle-btn" id="rtl-toggle" title="Toggle RTL">
+                    <i class="fas fa-language"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=1920" alt="Roller Derby Action" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <div class="container hero-content" data-reveal>
+            <h1 class="hero-title"><span class="neon-text">UNLEASH</span> THE<br><span class="gradient-text">DERBY WITHIN</span></h1>
+            <p class="hero-subtitle">High-octane competition meets elite training. Join the premier league where speed, strategy, and grit collide on the track.</p>
+            <div class="hero-btns">
+                <a href="services.html" class="btn-primary">Join the League</a>
+                <a href="about.html" class="btn-outline" style="margin-left: 20px;">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. League Team Roster -->
+    <section class="section-padding" id="roster">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">ELITE <span class="neon-text">TEAM ROSTER</span></h2>
+                <p class="section-subtitle">Meet the powerhouses leading the charge this season.</p>
+            </div>
+            
+            <div class="roster-grid">
+                <!-- Card 1 -->
+                <div class="player-card glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=600" alt="Player 1" class="player-img">
+                    <div class="player-info">
+                        <h3 class="neon-text">NOVA STORM</h3>
+                        <p>Jammer | Captain</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="player-card glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600" alt="Player 2" class="player-img">
+                    <div class="player-info">
+                        <h3 class="neon-text">RIFF RAFF</h3>
+                        <p>Blocker | Co-Captain</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="player-card glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=600" alt="Player 3" class="player-img">
+                    <div class="player-info">
+                        <h3 class="neon-text">VEX VENOM</h3>
+                        <p>Pivot</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="player-card glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=600" alt="Player 4" class="player-img">
+                    <div class="player-info">
+                        <h3 class="neon-text">SONIC SKATE</h3>
+                        <p>Jammer</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Fresh Meat Training Programs -->
+    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">FRESH MEAT <span class="neon-text">TRAINING</span></h2>
+                <p class="section-subtitle">Start your journey from rookie to pro with our elite programs.</p>
+            </div>
+            
+            <div class="roster-grid"> <!-- Reusing grid for consistent 4-card layout -->
+                <div class="glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1543808096-2ac8ab04aa7a?auto=format&fit=crop&q=80&w=600" alt="Basics" style="border-radius: 15px; margin-bottom: 20px; height: 200px; object-fit: cover;">
+                    <h3 class="neon-text" style="font-size: 20px; margin-bottom: 10px;">Skating Basics</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Master the fundamentals of balance, stops, and falls.</p>
+                    <div style="margin: 20px 0; font-weight: 700; color: var(--secondary-neon);">$99 / Month</div>
+                    <a href="services-details.html" class="btn-primary">Enroll Now</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1551698618-1fed5d978244?auto=format&fit=crop&q=80&w=600" alt="Tactics" style="border-radius: 15px; margin-bottom: 20px; height: 200px; object-fit: cover;">
+                    <h3 class="neon-text" style="font-size: 20px; margin-bottom: 10px;">Derby Tactics</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Learn advanced blocking, jammer strategy, and teamwork.</p>
+                    <div style="margin: 20px 0; font-weight: 700; color: var(--secondary-neon);">$149 / Month</div>
+                    <a href="services-details.html" class="btn-primary">Enroll Now</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1563299317-09d949439129?auto=format&fit=crop&q=80&w=600" alt="Fitness" style="border-radius: 15px; margin-bottom: 20px; height: 200px; object-fit: cover;">
+                    <h3 class="neon-text" style="font-size: 20px; margin-bottom: 10px;">Derby Fitness</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Specialized strength and conditioning for skaters.</p>
+                    <div style="margin: 20px 0; font-weight: 700; color: var(--secondary-neon);">$79 / Month</div>
+                    <a href="services-details.html" class="btn-primary">Enroll Now</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=600" alt="Pro" style="border-radius: 15px; margin-bottom: 20px; height: 200px; object-fit: cover;">
+                    <h3 class="neon-text" style="font-size: 20px; margin-bottom: 10px;">Pro Intensive</h3>
+                    <p style="color: var(--text-gray); flex: 1;">One-on-one coaching for top-tier competitive play.</p>
+                    <div style="margin: 20px 0; font-weight: 700; color: var(--secondary-neon);">$299 / Month</div>
+                    <a href="services-details.html" class="btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Upcoming Bout Schedule -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">UPCOMING <span class="neon-text">BOUTS</span></h2>
+                <p class="section-subtitle">Don't miss the hits. Catch our next matches live.</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="glass-card" style="margin-bottom: 20px; flex-direction: row; align-items: center; justify-content: space-between; padding: 20px 40px;" data-reveal>
+                    <div style="text-align: center;">
+                        <h4 style="color: var(--secondary-neon);">MAY 24</h4>
+                        <p>7:00 PM</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 30px;">
+                        <div style="text-align: center;">
+                            <img src="https://via.placeholder.com/60" alt="Team 1">
+                            <p>Neon Ninjas</p>
+                        </div>
+                        <h2 class="neon-text">VS</h2>
+                        <div style="text-align: center;">
+                            <img src="https://via.placeholder.com/60" alt="Team 2">
+                            <p>Skate Sirens</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-outline">Tickets</a>
+                </div>
+                <div class="glass-card" style="margin-bottom: 20px; flex-direction: row; align-items: center; justify-content: space-between; padding: 20px 40px;" data-reveal>
+                    <div style="text-align: center;">
+                        <h4 style="color: var(--secondary-neon);">JUN 12</h4>
+                        <p>6:30 PM</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 30px;">
+                        <div style="text-align: center;">
+                            <img src="https://via.placeholder.com/60" alt="Team 1">
+                            <p>Derby Devils</p>
+                        </div>
+                        <h2 class="neon-text">VS</h2>
+                        <div style="text-align: center;">
+                            <img src="https://via.placeholder.com/60" alt="Team 2">
+                            <p>Roller Rebels</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-outline">Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Featured Merch Shop -->
+    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">LEAGUE <span class="neon-text">MERCH</span></h2>
+                <p class="section-subtitle">Gear up with official league equipment and apparel.</p>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=400" alt="Skates" style="height: 200px; object-fit: contain; margin-bottom: 20px;">
+                    <h3 style="font-size: 18px; margin-bottom: 10px;">Pro Derby Skates</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Customized for high speed and sharp turns.</p>
+                    <div style="margin: 15px 0; font-weight: 700; color: var(--primary-neon);">$349.99</div>
+                    <a href="#" class="btn-primary">Add to Cart</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1589131008225-b1580ca14330?auto=format&fit=crop&q=80&w=400" alt="Helmet" style="height: 200px; object-fit: contain; margin-bottom: 20px;">
+                    <h3 style="font-size: 18px; margin-bottom: 10px;">Elite Helmet</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Maximum protection with aerodynamic design.</p>
+                    <div style="margin: 15px 0; font-weight: 700; color: var(--primary-neon);">$89.99</div>
+                    <a href="#" class="btn-primary">Add to Cart</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=400" alt="Wheels" style="height: 200px; object-fit: contain; margin-bottom: 20px;">
+                    <h3 style="font-size: 18px; margin-bottom: 10px;">Neon Grip Wheels</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Superior grip for indoor tracks.</p>
+                    <div style="margin: 15px 0; font-weight: 700; color: var(--primary-neon);">$59.99</div>
+                    <a href="#" class="btn-primary">Add to Cart</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=400" alt="Jersey" style="height: 200px; object-fit: contain; margin-bottom: 20px;">
+                    <h3 style="font-size: 18px; margin-bottom: 10px;">League Jersey</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Breathable fabric with custom numbering.</p>
+                    <div style="margin: 15px 0; font-weight: 700; color: var(--primary-neon);">$45.99</div>
+                    <a href="#" class="btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Livestream & Sponsorship Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: center;">
+                <div class="glass-card" style="padding: 0; overflow: hidden;" data-reveal>
+                    <div style="position: relative; padding-top: 56.25%;">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800" alt="Livestream" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; top: 20px; left: 20px; background: red; padding: 5px 15px; border-radius: 5px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                            <span style="width: 8px; height: 8px; background: white; border-radius: 50%; display: inline-block;"></span> LIVE NOW
+                        </div>
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer;">
+                            <i class="fas fa-play-circle" style="font-size: 80px; color: white; opacity: 0.8;"></i>
+                        </div>
+                    </div>
+                    <div style="padding: 20px;">
+                        <h3>CHAMPIONSHIP FINALS: NINJAS vs SIRENS</h3>
+                        <p style="color: var(--text-gray);">Watch the most anticipated match of the year live from the Arena.</p>
+                    </div>
+                </div>
+                
+                <div data-reveal>
+                    <h2 class="section-title">OUR <span class="neon-text">SPONSORS</span></h2>
+                    <p style="color: var(--text-gray); margin-bottom: 30px;">Proudly supported by the industry's finest.</p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px;">
+                        <div class="glass-card" style="height: 80px; display: flex; align-items: center; justify-content: center;">SPONSOR 1</div>
+                        <div class="glass-card" style="height: 80px; display: flex; align-items: center; justify-content: center;">SPONSOR 2</div>
+                        <div class="glass-card" style="height: 80px; display: flex; align-items: center; justify-content: center;">SPONSOR 3</div>
+                        <div class="glass-card" style="height: 80px; display: flex; align-items: center; justify-content: center;">SPONSOR 4</div>
+                    </div>
+                    <a href="pricing.html" class="btn-primary" style="width: 100%;">Become a Sponsor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-skating neon-text"></i>
+                        ROLLER<span>DERBY</span>
+                    </a>
+                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition and community since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="#">Fresh Meat Basics</a></li>
+                        <li><a href="#">Tactical Derby</a></li>
+                        <li><a href="#">Fitness & Conditioning</a></li>
+                        <li><a href="#">Private Coaching</a></li>
+                        <li><a href="#">Youth Academy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Get the latest match results and training tips directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn-primary" style="padding: 12px;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roller Derby League & Skate School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Links -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

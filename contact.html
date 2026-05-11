@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Roller Derby League & Skate School</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-skating neon-text"></i>
+                ROLLER<span>DERBY</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Banner -->
+    <section class="hero" style="height: 40vh;">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=1920" alt="Contact Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <div class="container hero-content" data-reveal>
+            <h1 class="hero-title">GET IN <span class="neon-text">TOUCH</span></h1>
+            <p class="hero-subtitle">We're here to answer your questions and get you on track.</p>
+        </div>
+    </section>
+
+    <!-- 2. Contact Information & 3. Contact Form -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px;">
+                <div data-reveal>
+                    <h2 class="section-title">CONTACT <span class="neon-text">INFO</span></h2>
+                    <p style="color: var(--text-gray); margin-bottom: 40px;">Reach out to us via email, phone, or visit our arena in person.</p>
+                    
+                    <div class="glass-card" style="margin-bottom: 20px;">
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <i class="fas fa-map-marker-alt neon-text" style="font-size: 24px;"></i>
+                            <div>
+                                <h4>Our Arena</h4>
+                                <p style="color: var(--text-gray);">123 Derby Lane, Skate City, SC 56789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card" style="margin-bottom: 20px;">
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <i class="fas fa-envelope neon-text" style="font-size: 24px;"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p style="color: var(--text-gray);">info@rollerderbyleague.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card" style="margin-bottom: 20px;">
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <i class="fas fa-phone neon-text" style="font-size: 24px;"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p style="color: var(--text-gray);">+1 (234) 567-890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card" data-reveal>
+                    <h2 class="section-title" style="font-size: 28px;">SEND A <span class="neon-text">MESSAGE</span></h2>
+                    <form style="margin-top: 30px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                            <input type="text" placeholder="First Name" style="background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white;">
+                            <input type="text" placeholder="Last Name" style="background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white;">
+                        </div>
+                        <input type="email" placeholder="Email Address" style="width: 100%; background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white; margin-bottom: 20px;">
+                        <select style="width: 100%; background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white; margin-bottom: 20px;">
+                            <option>Inquiry Type</option>
+                            <option>Training Programs</option>
+                            <option>League Sponsorship</option>
+                            <option>Match Tickets</option>
+                            <option>Other</option>
+                        </select>
+                        <textarea placeholder="How can we help?" rows="6" style="width: 100%; background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white; margin-bottom: 20px;"></textarea>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Training Location Map -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="glass-card" style="padding: 0; height: 450px; overflow: hidden;" data-reveal>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d-122.4194154846816!3d37.77492957975948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa0!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1625061234567!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ + Social Connect -->
+    <section class="section-padding" style="background: rgba(0,242,255,0.02);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center;">
+                <div data-reveal>
+                    <h2 class="section-title">COMMON <span class="neon-text">QUESTIONS</span></h2>
+                    <div style="margin-top: 30px;">
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px;">
+                            <h4 style="margin-bottom: 10px;">When are practices held?</h4>
+                            <p style="color: var(--text-gray);">Typically Tuesday and Thursday evenings from 7:00 PM to 9:00 PM.</p>
+                        </div>
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px;">
+                            <h4 style="margin-bottom: 10px;">Can I watch a practice?</h4>
+                            <p style="color: var(--text-gray);">Yes! We have an observation deck for prospective skaters and fans.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" data-reveal>
+                    <h2 class="section-title">CONNECT <span class="neon-text">SOCIALLY</span></h2>
+                    <p style="color: var(--text-gray); margin-bottom: 30px;">Join our digital community.</p>
+                    <div class="social-icons" style="justify-content: center; transform: scale(1.5);">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-skating neon-text"></i>
+                        ROLLER<span>DERBY</span>
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="#">Academy</a></li>
+                        <li><a href="#">League</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roller Derby League & Skate School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

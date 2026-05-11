@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Roller Derby League & Skate School</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-skating neon-text"></i>
+                ROLLER<span>DERBY</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Banner -->
+    <section class="hero" style="height: 50vh;">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=1920" alt="Services Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <div class="container hero-content" data-reveal>
+            <h1 class="hero-title">OUR <span class="neon-text">SERVICES</span></h1>
+            <p class="hero-subtitle">Comprehensive training for every skill level.</p>
+        </div>
+    </section>
+
+    <!-- 2. Training Services Grid (4 cards) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">CORE <span class="neon-text">TRAINING</span></h2>
+                <p class="section-subtitle">Structured paths to athletic excellence.</p>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" data-reveal>
+                    <i class="fas fa-baby neon-text" style="font-size: 40px; margin-bottom: 20px;"></i>
+                    <h3>Fresh Meat</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Our signature 12-week program for absolute beginners. Learn to skate and fall safely.</p>
+                    <a href="services-details.html" class="btn-primary" style="margin-top: 20px;">Learn More</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <i class="fas fa-shield-alt neon-text" style="font-size: 40px; margin-bottom: 20px;"></i>
+                    <h3>Defense Camp</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Specialized blocking techniques, positional play, and wall strategies.</p>
+                    <a href="services-details.html" class="btn-primary" style="margin-top: 20px;">Learn More</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <i class="fas fa-bolt neon-text" style="font-size: 40px; margin-bottom: 20px;"></i>
+                    <h3>Jammer School</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Speed, agility, and point-scoring strategies for the league's fastest skaters.</p>
+                    <a href="services-details.html" class="btn-primary" style="margin-top: 20px;">Learn More</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <i class="fas fa-user-friends neon-text" style="font-size: 40px; margin-bottom: 20px;"></i>
+                    <h3>Youth League</h3>
+                    <p style="color: var(--text-gray); flex: 1;">Safe and fun training for skaters aged 8-16. Building the future of derby.</p>
+                    <a href="services-details.html" class="btn-primary" style="margin-top: 20px;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Derby Workshops -->
+    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">EXPERT <span class="neon-text">WORKSHOPS</span></h2>
+                <p class="section-subtitle">Deep dives into specific derby skills.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div class="glass-card" style="flex-direction: row; gap: 30px; align-items: center;" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=200" alt="Workshop" style="width: 150px; height: 150px; border-radius: 15px; object-fit: cover;">
+                    <div>
+                        <h3>Skate Maintenance</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 15px;">Learn to clean bearings, change wheels, and tune your plates.</p>
+                        <a href="#" class="neon-text" style="text-decoration: none; font-weight: 700;">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="glass-card" style="flex-direction: row; gap: 30px; align-items: center;" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=200" alt="Workshop" style="width: 150px; height: 150px; border-radius: 15px; object-fit: cover;">
+                    <div>
+                        <h3>Rules & Officiating</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 15px;">Understand the WFTDA ruleset and how to become a ref.</p>
+                        <a href="#" class="neon-text" style="text-decoration: none; font-weight: 700;">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Private Coaching Programs -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">PRIVATE <span class="neon-text">COACHING</span></h2>
+                <p class="section-subtitle">Accelerate your progress with personalized attention.</p>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" data-reveal>
+                    <h3 style="color: var(--secondary-neon);">Level 1</h3>
+                    <p style="color: var(--text-gray); margin: 20px 0;">1 Session per week. Focus on core stability.</p>
+                    <h2 style="margin-bottom: 20px;">$50<span style="font-size: 14px; color: var(--text-gray);">/hr</span></h2>
+                    <a href="#" class="btn-outline" style="width: 100%;">Book Session</a>
+                </div>
+                <div class="glass-card" data-reveal style="border-color: var(--primary-neon);">
+                    <h3 style="color: var(--primary-neon);">Level 2</h3>
+                    <p style="color: var(--text-gray); margin: 20px 0;">2 Sessions per week. Focus on agility.</p>
+                    <h2 style="margin-bottom: 20px;">$45<span style="font-size: 14px; color: var(--text-gray);">/hr</span></h2>
+                    <a href="#" class="btn-primary" style="width: 100%;">Book Session</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <h3 style="color: var(--secondary-neon);">Level 3</h3>
+                    <p style="color: var(--text-gray); margin: 20px 0;">3 Sessions per week. Advanced tactics.</p>
+                    <h2 style="margin-bottom: 20px;">$40<span style="font-size: 14px; color: var(--text-gray);">/hr</span></h2>
+                    <a href="#" class="btn-outline" style="width: 100%;">Book Session</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <h3 style="color: var(--secondary-neon);">Elite</h3>
+                    <p style="color: var(--text-gray); margin: 20px 0;">Daily intensive. Pro-level preparation.</p>
+                    <h2 style="margin-bottom: 20px;">$35<span style="font-size: 14px; color: var(--text-gray);">/hr</span></h2>
+                    <a href="#" class="btn-outline" style="width: 100%;">Book Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CTA Banner -->
+    <section class="section-padding" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; text-align: center;">
+        <div class="container" data-reveal>
+            <h2 style="font-size: 40px; margin-bottom: 20px;">NOT SURE WHERE TO <span class="neon-text">START?</span></h2>
+            <p style="max-width: 700px; margin: 0 auto 40px; color: var(--text-gray);">Take our skill assessment test or talk to a coach to find the perfect program for your goals.</p>
+            <a href="contact.html" class="btn-primary">Talk to a Coach</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Same Footer as Index -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-skating neon-text"></i>
+                        ROLLER<span>DERBY</span>
+                    </a>
+                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition and community since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="#">Fresh Meat Basics</a></li>
+                        <li><a href="#">Tactical Derby</a></li>
+                        <li><a href="#">Fitness & Conditioning</a></li>
+                        <li><a href="#">Private Coaching</a></li>
+                        <li><a href="#">Youth Academy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Get the latest match results and training tips directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn-primary" style="padding: 12px;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roller Derby League & Skate School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

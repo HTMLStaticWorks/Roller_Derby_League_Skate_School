@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Out of Bounds | Roller Derby League</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background: #050505; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+        .error-container { position: relative; z-index: 1; }
+        .error-text { font-size: 150px; font-weight: 900; line-height: 1; color: rgba(255,255,255,0.05); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; pointer-events: none; }
+        .skate-icon { font-size: 80px; margin-bottom: 20px; animation: wobble 2s infinite ease-in-out; }
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <div class="error-container" data-reveal>
+        <div class="error-text">404</div>
+        <div class="skate-icon neon-text">
+            <i class="fas fa-skating"></i>
+        </div>
+        <h1 style="font-size: 48px; margin-bottom: 15px;">OUT OF <span class="neon-text">BOUNDS</span></h1>
+        <p style="color: var(--text-gray); max-width: 500px; margin: 0 auto 30px;">Looks like you've taken a fall and ended up outside the track. Let's get you back in the game.</p>
+        <a href="index.html" class="btn-primary">Back to Arena</a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.body.classList.add('loaded');
+    </script>
+</body>
+</html>

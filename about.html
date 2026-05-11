@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Roller Derby League & Skate School</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--glass-border);
+            top: 0; bottom: 0; left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px; height: 20px;
+            right: -10px; top: 15px;
+            background: var(--primary-neon);
+            border: 4px solid var(--bg-dark);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left { left: 0; }
+        .right { left: 50%; }
+        .right::after { left: -10px; }
+        
+        @media (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-item::after { left: 21px; }
+            .right { left: 0%; }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-skating neon-text"></i>
+                ROLLER<span>DERBY</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Banner -->
+    <section class="hero" style="height: 60vh;">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1551698618-1fed5d978244?auto=format&fit=crop&q=80&w=1920" alt="About Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <div class="container hero-content" data-reveal>
+            <h1 class="hero-title">OUR <span class="neon-text">LEGACY</span></h1>
+            <p class="hero-subtitle">Building a community of strength, speed, and sisterhood since 2010.</p>
+        </div>
+    </section>
+
+    <!-- 2. Our Story Timeline -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">THE <span class="neon-text">JOURNEY</span></h2>
+                <p class="section-subtitle">How we became the premier league in the region.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item left" data-reveal>
+                    <div class="glass-card">
+                        <h3 class="neon-text">2010</h3>
+                        <h4>The Beginning</h4>
+                        <p>Founded by five skating enthusiasts in a small neighborhood garage.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-reveal>
+                    <div class="glass-card">
+                        <h3 class="neon-text">2015</h3>
+                        <h4>Going Pro</h4>
+                        <p>Joined the National Association and hosted our first official championship.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left" data-reveal>
+                    <div class="glass-card">
+                        <h3 class="neon-text">2020</h3>
+                        <h4>Academy Launch</h4>
+                        <p>Opened our state-of-the-art Skate School to train the next generation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-reveal>
+                    <div class="glass-card">
+                        <h3 class="neon-text">2026</h3>
+                        <h4>The Future</h4>
+                        <p>Expanding to 5 locations and launching our digital training platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Meet The Coaches (4 cards) -->
+    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">MEET THE <span class="neon-text">COACHES</span></h2>
+                <p class="section-subtitle">Learn from the legends of the track.</p>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="player-card glass-card" data-reveal>
+                    <img src="https://i.pravatar.cc/300?u=a" alt="Coach 1" class="player-img">
+                    <div class="player-info">
+                        <h3 class="neon-text">COACH VELOCITY</h3>
+                        <p>Head of Strategy</p>
+                    </div>
+                </div>
+                <div class="player-card glass-card" data-reveal>
+                    <img src="https://i.pravatar.cc/300?u=b" alt="Coach 2" class="player-img">
+                    <div class="player-info">
+                        <h3 class="neon-text">SMASH QUEEN</h3>
+                        <p>Defense Specialist</p>
+                    </div>
+                </div>
+                <div class="player-card glass-card" data-reveal>
+                    <img src="https://i.pravatar.cc/300?u=c" alt="Coach 3" class="player-img">
+                    <div class="player-info">
+                        <h3 class="neon-text">GLIDE MASTER</h3>
+                        <p>Skating Mechanics</p>
+                    </div>
+                </div>
+                <div class="player-card glass-card" data-reveal>
+                    <img src="https://i.pravatar.cc/300?u=d" alt="Coach 4" class="player-img">
+                    <div class="player-info">
+                        <h3 class="neon-text">NIGHTMARE</h3>
+                        <p>Mental Toughness</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Why Choose Our League -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div data-reveal>
+                    <h2 class="section-title">WHY <span class="neon-text">JOIN US?</span></h2>
+                    <p style="color: var(--text-gray); margin-bottom: 30px;">We provide more than just a place to skate. We provide a platform for growth.</p>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fas fa-check-circle neon-text"></i>
+                            <div>
+                                <strong>Professional Facility</strong>
+                                <p style="font-size: 14px; color: var(--text-gray);">Olympic-grade flooring and safety equipment.</p>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fas fa-check-circle neon-text"></i>
+                            <div>
+                                <strong>Certified Coaches</strong>
+                                <p style="font-size: 14px; color: var(--text-gray);">All our instructors are former or current pro athletes.</p>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fas fa-check-circle neon-text"></i>
+                            <div>
+                                <strong>Global Network</strong>
+                                <p style="font-size: 14px; color: var(--text-gray);">Connect with leagues across the globe for tournaments.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card" style="padding: 0; overflow: hidden;" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=800" alt="Training" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Achievements & Awards -->
+    <section class="section-padding" style="background: rgba(0,242,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">OUR <span class="neon-text">AWARDS</span></h2>
+                <p class="section-subtitle">Recognized for excellence on and off the track.</p>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card text-center" data-reveal>
+                    <i class="fas fa-trophy neon-text" style="font-size: 50px; margin-bottom: 20px;"></i>
+                    <h3>Champs 2024</h3>
+                    <p style="color: var(--text-gray);">Regional League Champions</p>
+                </div>
+                <div class="glass-card text-center" data-reveal>
+                    <i class="fas fa-medal neon-text" style="font-size: 50px; margin-bottom: 20px;"></i>
+                    <h3>Best Academy</h3>
+                    <p style="color: var(--text-gray);">Sports Excellence Award</p>
+                </div>
+                <div class="glass-card text-center" data-reveal>
+                    <i class="fas fa-star neon-text" style="font-size: 50px; margin-bottom: 20px;"></i>
+                    <h3>5 Star Rated</h3>
+                    <p style="color: var(--text-gray);">Community Choice Award</p>
+                </div>
+                <div class="glass-card text-center" data-reveal>
+                    <i class="fas fa-handshake neon-text" style="font-size: 50px; margin-bottom: 20px;"></i>
+                    <h3>Impact Award</h3>
+                    <p style="color: var(--text-gray);">Youth Development Recognition</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-skating neon-text"></i>
+                        ROLLER<span>DERBY</span>
+                    </a>
+                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition and community since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="#">Fresh Meat Basics</a></li>
+                        <li><a href="#">Tactical Derby</a></li>
+                        <li><a href="#">Fitness & Conditioning</a></li>
+                        <li><a href="#">Private Coaching</a></li>
+                        <li><a href="#">Youth Academy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Get the latest match results and training tips directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn-primary" style="padding: 12px;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roller Derby League & Skate School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

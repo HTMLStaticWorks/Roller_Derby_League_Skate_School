@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details | Roller Derby League & Skate School</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-skating neon-text"></i>
+                ROLLER<span>DERBY</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Featured Banner -->
+    <section class="hero" style="height: 60vh;">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=1920" alt="Article Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <div class="container hero-content" data-reveal>
+            <span style="color: var(--secondary-neon); font-weight: 800; text-transform: uppercase;">Strategy</span>
+            <h1 class="hero-title" style="font-size: 50px;">MASTERING THE <span class="neon-text">POWER JAM</span></h1>
+            <p class="hero-subtitle">By Coach Velocity | May 10, 2026</p>
+        </div>
+    </section>
+
+    <!-- 2. Article Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div data-reveal>
+                    <p style="font-size: 18px; margin-bottom: 25px; line-height: 1.8;">A Power Jam occurs when the opposing jammer is sent to the penalty box, leaving your jammer as the only person on the track who can score points. This is the most critical time in a roller derby match and can often determine the outcome of the game.</p>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">To maximize a Power Jam, your blockers must shift from a defensive mindset to an offensive one. Clearing a path for your jammer while preventing the opposing blockers from reformed walls is key.</p>
+                    <h3 class="neon-text" style="margin-bottom: 20px;">1. CLEAR THE TRACK</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">Your blockers should identify the weakest point in the opposing wall and use coordinated blocks to open a lane. Communication is vital here; if the jammer sees a hole on the inside line, they need to call it out.</p>
+                </div>
+
+                <!-- 3. Quote Highlight -->
+                <div class="glass-card" style="margin: 40px 0; border-left: 5px solid var(--primary-neon); background: rgba(255,0,127,0.05);" data-reveal>
+                    <h2 style="font-style: italic; font-size: 24px; line-height: 1.4;">"Speed is important, but control is everything. In a power jam, a calm jammer is a scoring jammer."</h2>
+                </div>
+
+                <div data-reveal>
+                    <h3 class="neon-text" style="margin-bottom: 20px;">2. RECYCLE THE BLOCKERS</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">When you knock an opponent out of bounds, your blockers should "recycle" them by skating backward to force the opponent to re-enter the track behind you. This buys your jammer more time and space to complete laps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Related Posts (4 cards) -->
+    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">RELATED <span class="neon-text">POSTS</span></h2>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=400" alt="Related" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h4 style="font-size: 16px; margin-bottom: 10px;">Choosing Wheels</h4>
+                        <a href="#" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
+                    </div>
+                </div>
+                <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1551698618-1fed5d978244?auto=format&fit=crop&q=80&w=400" alt="Related" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h4 style="font-size: 16px; margin-bottom: 10px;">Off-Track Training</h4>
+                        <a href="#" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
+                    </div>
+                </div>
+                <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1543808096-2ac8ab04aa7a?auto=format&fit=crop&q=80&w=400" alt="Related" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h4 style="font-size: 16px; margin-bottom: 10px;">The Community</h4>
+                        <a href="#" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
+                    </div>
+                </div>
+                <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=400" alt="Related" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h4 style="font-size: 16px; margin-bottom: 10px;">Pro Interview</h4>
+                        <a href="#" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Comment Form -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;" class="glass-card" data-reveal>
+                <h3 style="margin-bottom: 30px;">LEAVE A <span class="neon-text">COMMENT</span></h3>
+                <form>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                        <input type="text" placeholder="Name" style="background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white;">
+                        <input type="email" placeholder="Email" style="background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white;">
+                    </div>
+                    <textarea placeholder="Your Message" rows="5" style="width: 100%; background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white; margin-bottom: 20px;"></textarea>
+                    <button type="submit" class="btn-primary">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-skating neon-text"></i>
+                        ROLLER<span>DERBY</span>
+                    </a>
+                    <p>The world's premier roller derby league and skate academy.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Social</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roller Derby League & Skate School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

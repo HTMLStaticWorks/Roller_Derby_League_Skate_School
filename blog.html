@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Roller Derby League & Skate School</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-skating neon-text"></i>
+                ROLLER<span>DERBY</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Banner -->
+    <section class="hero" style="height: 50vh;">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=1920" alt="Blog Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <div class="container hero-content" data-reveal>
+            <h1 class="hero-title">DERBY <span class="neon-text">INSIGHTS</span></h1>
+            <p class="hero-subtitle">The latest news, tips, and stories from the track.</p>
+        </div>
+    </section>
+
+    <!-- 2. Featured Articles -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">FEATURED <span class="neon-text">ARTICLES</span></h2>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=600" alt="Blog 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 20px; flex: 1; display: flex; flex-direction: column;">
+                        <span style="color: var(--secondary-neon); font-size: 12px; font-weight: 700;">STRATEGY</span>
+                        <h3 style="font-size: 18px; margin: 10px 0;">Mastering the Power Jam</h3>
+                        <p style="color: var(--text-gray); font-size: 14px; flex: 1;">Learn how to maximize your lead when the opposing jammer is in the box.</p>
+                        <a href="blog-details.html" class="neon-text" style="text-decoration: none; font-weight: 700; margin-top: 15px; display: inline-block;">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=600" alt="Blog 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 20px; flex: 1; display: flex; flex-direction: column;">
+                        <span style="color: var(--secondary-neon); font-size: 12px; font-weight: 700;">GEAR</span>
+                        <h3 style="font-size: 18px; margin: 10px 0;">Choosing the Right Wheels</h3>
+                        <p style="color: var(--text-gray); font-size: 14px; flex: 1;">A guide to durometer and how it affects your performance on different tracks.</p>
+                        <a href="blog-details.html" class="neon-text" style="text-decoration: none; font-weight: 700; margin-top: 15px; display: inline-block;">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1551698618-1fed5d978244?auto=format&fit=crop&q=80&w=600" alt="Blog 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 20px; flex: 1; display: flex; flex-direction: column;">
+                        <span style="color: var(--secondary-neon); font-size: 12px; font-weight: 700;">TRAINING</span>
+                        <h3 style="font-size: 18px; margin: 10px 0;">Off-Track Conditioning</h3>
+                        <p style="color: var(--text-gray); font-size: 14px; flex: 1;">Essential strength exercises to prevent injuries and increase speed.</p>
+                        <a href="blog-details.html" class="neon-text" style="text-decoration: none; font-weight: 700; margin-top: 15px; display: inline-block;">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1543808096-2ac8ab04aa7a?auto=format&fit=crop&q=80&w=600" alt="Blog 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 20px; flex: 1; display: flex; flex-direction: column;">
+                        <span style="color: var(--secondary-neon); font-size: 12px; font-weight: 700;">LIFESTYLE</span>
+                        <h3 style="font-size: 18px; margin: 10px 0;">The Derby Community</h3>
+                        <p style="color: var(--text-gray); font-size: 14px; flex: 1;">How roller derby fosters empowerment and sisterhood across the world.</p>
+                        <a href="blog-details.html" class="neon-text" style="text-decoration: none; font-weight: 700; margin-top: 15px; display: inline-block;">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Latest Derby News -->
+    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">LATEST <span class="neon-text">NEWS</span></h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+                <div class="glass-card" data-reveal style="flex-direction: row; gap: 30px; align-items: center; padding: 20px;">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=200" alt="News" style="width: 150px; height: 150px; border-radius: 10px; object-fit: cover;">
+                    <div>
+                        <h3 style="font-size: 20px; margin-bottom: 10px;">Season Finals Announced!</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 10px;">The championship match will take place on June 24th at the Grand Arena.</p>
+                        <p style="font-size: 12px; color: var(--primary-neon);">May 10, 2026</p>
+                    </div>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <h4 class="neon-text" style="margin-bottom: 15px;">Trending Topics</h4>
+                    <ul style="list-style: none; color: var(--text-gray); font-size: 14px;">
+                        <li style="margin-bottom: 10px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;">#WFTDA_Updates</li>
+                        <li style="margin-bottom: 10px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;">#SkateTech2026</li>
+                        <li style="margin-bottom: 10px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;">#DerbyLove</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Video Stories -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">VIDEO <span class="neon-text">STORIES</span></h2>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" style="padding: 0; position: relative;" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=400" alt="Video" style="width: 100%; border-radius: 20px;">
+                    <i class="fas fa-play-circle" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; color: white;"></i>
+                    <p style="padding: 15px; text-align: center; font-weight: 600;">Match Highlights</p>
+                </div>
+                <div class="glass-card" style="padding: 0; position: relative;" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=400" alt="Video" style="width: 100%; border-radius: 20px;">
+                    <i class="fas fa-play-circle" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; color: white;"></i>
+                    <p style="padding: 15px; text-align: center; font-weight: 600;">Skate Tuning 101</p>
+                </div>
+                <div class="glass-card" style="padding: 0; position: relative;" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=400" alt="Video" style="width: 100%; border-radius: 20px;">
+                    <i class="fas fa-play-circle" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; color: white;"></i>
+                    <p style="padding: 15px; text-align: center; font-weight: 600;">Athlete Interview</p>
+                </div>
+                <div class="glass-card" style="padding: 0; position: relative;" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=400" alt="Video" style="width: 100%; border-radius: 20px;">
+                    <i class="fas fa-play-circle" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; color: white;"></i>
+                    <p style="padding: 15px; text-align: center; font-weight: 600;">Behind the Scenes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Newsletter CTA -->
+    <section class="section-padding" style="background: var(--bg-card); text-align: center;">
+        <div class="container" data-reveal>
+            <h2 class="section-title">STAY IN THE <span class="neon-text">LOOP</span></h2>
+            <p style="margin-bottom: 30px; color: var(--text-gray);">Subscribe to our newsletter for exclusive content and event early-bird access.</p>
+            <form style="max-width: 600px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="email" placeholder="Email Address" style="background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white; flex: 1;">
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-skating neon-text"></i>
+                        ROLLER<span>DERBY</span>
+                    </a>
+                    <p>The world's premier roller derby league and skate academy.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roller Derby League & Skate School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

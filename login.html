@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Roller Derby League & Skate School</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background: #050505; height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .auth-container {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            background: #0a0a0c;
+            position: relative;
+        }
+        .auth-container::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+            z-index: -1;
+            border-radius: 32px;
+            opacity: 0.3;
+        }
+        .auth-form {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .auth-input {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            padding: 15px;
+            border-radius: 12px;
+            color: white;
+            margin-bottom: 20px;
+            outline: none;
+            transition: var(--transition);
+        }
+        .auth-input:focus { border-color: var(--primary-neon); background: rgba(255,255,255,0.1); box-shadow: 0 0 15px rgba(255, 0, 127, 0.2); }
+        
+        .logo-center {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <div class="auth-container">
+        <div class="auth-form">
+            <div class="logo-center">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-skating neon-text"></i>
+                    ROLLER<span>DERBY</span>
+                </a>
+            </div>
+            
+            <h2 style="text-align: center; margin-bottom: 10px;">WELCOME <span class="neon-text">BACK</span></h2>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 30px;">Sign in to your athlete account</p>
+
+            <form>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-size: 14px; color: var(--text-gray);">Email Address</label>
+                    <input type="email" class="auth-input" placeholder="name@example.com" required>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-size: 14px; color: var(--text-gray);">Password</label>
+                    <input type="password" class="auth-input" placeholder="••••••••" required>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; font-size: 14px;">
+                    <label style="color: var(--text-gray); display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" style="color: var(--primary-neon); text-decoration: none;">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 15px;">Sign In</button>
+                
+                <div style="text-align: center; margin: 30px 0; position: relative;">
+                    <span style="background: #0a0a0c; padding: 0 15px; position: relative; z-index: 1; color: var(--text-gray); font-size: 12px;">OR CONTINUE WITH</span>
+                    <hr style="position: absolute; top: 50%; width: 100%; border: none; border-top: 1px solid var(--glass-border);">
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <a href="#" class="btn-outline" style="font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px;">
+                        <i class="fab fa-google"></i> Google
+                    </a>
+                    <a href="#" class="btn-outline" style="font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px;">
+                        <i class="fab fa-apple"></i> Apple
+                    </a>
+                </div>
+                
+                <p style="text-align: center; margin-top: 30px; font-size: 14px; color: var(--text-gray);">
+                    Don't have an account? <a href="register.html" style="color: var(--secondary-neon); text-decoration: none; font-weight: 700;">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.body.classList.add('loaded');
+    </script>
+</body>
+</html>

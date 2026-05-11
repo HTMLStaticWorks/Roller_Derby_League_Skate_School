@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Roller Derby League & Skate School</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 50px;
+        }
+        .pricing-table th, .pricing-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .pricing-table th { background: rgba(255,255,255,0.05); color: var(--secondary-neon); text-transform: uppercase; }
+        .pricing-table tr:hover { background: rgba(255, 255, 255, 0.02); }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-skating neon-text"></i>
+                ROLLER<span>DERBY</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Banner -->
+    <section class="hero" style="height: 50vh;">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1920" alt="Pricing Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <div class="container hero-content" data-reveal>
+            <h1 class="hero-title">LEAGUE <span class="neon-text">PRICING</span></h1>
+            <p class="hero-subtitle">Affordable plans for athletes and supporters alike.</p>
+        </div>
+    </section>
+
+    <!-- 2. Membership Plans (4 cards) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">MEMBERSHIP <span class="neon-text">PLANS</span></h2>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="glass-card" data-reveal>
+                    <h3 style="color: var(--secondary-neon);">Supporter</h3>
+                    <h2 style="margin: 20px 0;">$15<span style="font-size: 14px; color: var(--text-gray);">/mo</span></h2>
+                    <ul style="list-style: none; color: var(--text-gray); margin-bottom: 30px; flex: 1;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Digital Badge</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Early Access Tickets</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Merch Discounts</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Join Now</a>
+                </div>
+                <div class="glass-card" data-reveal style="border-color: var(--primary-neon);">
+                    <h3 style="color: var(--primary-neon);">Active Athlete</h3>
+                    <h2 style="margin: 20px 0;">$89<span style="font-size: 14px; color: var(--text-gray);">/mo</span></h2>
+                    <ul style="list-style: none; color: var(--text-gray); margin-bottom: 30px; flex: 1;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Unlimited Track Access</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> 2 Team Practices / week</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Professional Coaching</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Join Now</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <h3 style="color: var(--secondary-neon);">Elite Pro</h3>
+                    <h2 style="margin: 20px 0;">$149<span style="font-size: 14px; color: var(--text-gray);">/mo</span></h2>
+                    <ul style="list-style: none; color: var(--text-gray); margin-bottom: 30px; flex: 1;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> All Active Benefits</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> 1-on-1 Sessions</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Custom Jersey</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Join Now</a>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <h3 style="color: var(--secondary-neon);">Family Pack</h3>
+                    <h2 style="margin: 20px 0;">$199<span style="font-size: 14px; color: var(--text-gray);">/mo</span></h2>
+                    <ul style="list-style: none; color: var(--text-gray); margin-bottom: 30px; flex: 1;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Up to 4 Members</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Youth League Included</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Shared Track Time</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Sponsorship Packages -->
+    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">SPONSORSHIP <span class="neon-text">PACKAGES</span></h2>
+                <p class="section-subtitle">Support local sports and reach a passionate audience.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div class="glass-card" data-reveal>
+                    <h3 style="color: #cd7f32;">Bronze</h3>
+                    <h2 style="margin: 20px 0;">$500<span style="font-size: 14px; color: var(--text-gray);">/yr</span></h2>
+                    <p style="color: var(--text-gray);">Logo on website & shoutout at bouts.</p>
+                </div>
+                <div class="glass-card" data-reveal style="border-color: #c0c0c0;">
+                    <h3 style="color: #c0c0c0;">Silver</h3>
+                    <h2 style="margin: 20px 0;">$1500<span style="font-size: 14px; color: var(--text-gray);">/yr</span></h2>
+                    <p style="color: var(--text-gray);">Logo on jerseys & VIP booth at finals.</p>
+                </div>
+                <div class="glass-card" data-reveal style="border-color: #ffd700;">
+                    <h3 style="color: #ffd700;">Gold</h3>
+                    <h2 style="margin: 20px 0;">$5000<span style="font-size: 14px; color: var(--text-gray);">/yr</span></h2>
+                    <p style="color: var(--text-gray);">Full Arena branding & naming rights to one bout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Comparison Table -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title">FEATURE <span class="neon-text">COMPARISON</span></h2>
+            </div>
+            
+            <table class="pricing-table" data-reveal>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Supporter</th>
+                        <th>Active</th>
+                        <th>Elite Pro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Track Access</td>
+                        <td>None</td>
+                        <td>Unlimited</td>
+                        <td>Priority</td>
+                    </tr>
+                    <tr>
+                        <td>Coaching</td>
+                        <td>No</td>
+                        <td>Group</td>
+                        <td>Personal</td>
+                    </tr>
+                    <tr>
+                        <td>Match Tickets</td>
+                        <td>Discounted</td>
+                        <td>Free (1)</td>
+                        <td>VIP Access</td>
+                    </tr>
+                    <tr>
+                        <td>Voting Rights</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 5. CTA Banner -->
+    <section class="section-padding" style="text-align: center;">
+        <div class="container" data-reveal>
+            <h2 style="font-size: 40px; margin-bottom: 20px;">NEED A <span class="neon-text">CUSTOM PLAN?</span></h2>
+            <p style="max-width: 600px; margin: 0 auto 40px; color: var(--text-gray);">We offer group discounts and corporate wellness programs. Contact us to learn more.</p>
+            <a href="contact.html" class="btn-primary">Contact Sales</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-skating neon-text"></i>
+                        ROLLER<span>DERBY</span>
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roller Derby League & Skate School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
