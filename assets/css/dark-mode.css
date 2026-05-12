@@ -64,6 +64,14 @@ body:not(.dark-mode) .hamburger span {
     background: #121214;
 }
 
+body:not(.dark-mode) .hero-title {
+    color: #000000;
+}
+
+body:not(.dark-mode) .hero-subtitle {
+    color: #000000;
+}
+
 body:not(.dark-mode) .social-icons a {
     color: #121214;
 }
