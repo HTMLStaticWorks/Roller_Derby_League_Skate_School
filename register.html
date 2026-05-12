@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | Roller Derby League & Skate School</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=1">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background: #050505; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+        body { background: var(--bg-dark); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; transition: var(--transition); }
         .auth-container {
             width: 100%;
             max-width: 550px;
@@ -16,8 +17,9 @@
             overflow: hidden;
             border: 1px solid var(--glass-border);
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            background: #0a0a0c;
+            background: var(--bg-light);
             position: relative;
+            transition: var(--transition);
         }
         .auth-container::before {
             content: '';
@@ -36,11 +38,11 @@
         }
         .auth-input {
             width: 100%;
-            background: rgba(255,255,255,0.05);
+            background: var(--bg-card);
             border: 1px solid var(--glass-border);
             padding: 12px;
             border-radius: 12px;
-            color: white;
+            color: var(--text-white);
             margin-bottom: 15px;
             outline: none;
             transition: var(--transition);
@@ -62,9 +64,77 @@
             justify-content: center;
             margin-bottom: 30px;
         }
+
+        /* Dark Mode Visibility Fix for White Card */
+        body.dark-mode .auth-container { color: #121214; }
+        body.dark-mode .logo, 
+        body.dark-mode h2, 
+        body.dark-mode .auth-input,
+        body.dark-mode .toggle-password,
+        body.dark-mode .btn-outline { 
+            color: #121214; 
+        }
+        body.dark-mode .btn-outline { border-color: rgba(0, 0, 0, 0.1); }
+        body.dark-mode .auth-input { 
+            background: rgba(0, 0, 0, 0.05); 
+            border-color: rgba(0, 0, 0, 0.1); 
+        }
+        body.dark-mode .auth-input::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 480px) {
+            body { flex-direction: column; min-height: 100vh; padding: 40px 20px; }
+            .auth-form { padding: 30px 20px; }
+            .auth-container { border-radius: 20px; }
+            .auth-controls { 
+                position: static !important; 
+                margin-bottom: 20px; 
+                justify-content: flex-end;
+                width: 100%;
+            }
+            .social-grid { gap: 10px !important; }
+            .social-grid .btn-outline { padding: 12px 5px !important; font-size: 11px !important; }
+        }
+
+        .auth-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .password-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            cursor: pointer;
+            color: var(--text-gray);
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .auth-input { margin-bottom: 0 !important; }
+        .password-wrapper { margin-bottom: 15px; }
+        .strength-meter { margin-top: 5px !important; }
     </style>
 </head>
 <body class="dark-mode">
+
+    <div class="auth-controls">
+        <button class="toggle-btn" id="dark-mode-toggle" title="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="toggle-btn" id="rtl-toggle" title="Toggle RTL">
+            <i class="fas fa-right-left"></i>
+        </button>
+    </div>
 
     <div class="auth-container">
         <div class="auth-form">
@@ -79,15 +149,14 @@
             <p style="text-align: center; color: var(--text-gray); margin-bottom: 30px;">Create your athlete profile today</p>
             
             <form>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 5px;">
-                    <div>
-                        <label style="display: block; margin-bottom: 5px; font-size: 12px; color: var(--text-gray);">First Name</label>
-                        <input type="text" class="auth-input" placeholder="John" required>
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 5px; font-size: 12px; color: var(--text-gray);">Last Name</label>
-                        <input type="text" class="auth-input" placeholder="Doe" required>
-                    </div>
+                <div style="margin-bottom: 5px;">
+                    <label style="display: block; margin-bottom: 5px; font-size: 12px; color: var(--text-gray);">First Name</label>
+                    <input type="text" class="auth-input" placeholder="John" required>
+                </div>
+
+                <div style="margin-bottom: 5px;">
+                    <label style="display: block; margin-bottom: 5px; font-size: 12px; color: var(--text-gray);">Last Name</label>
+                    <input type="text" class="auth-input" placeholder="Doe" required>
                 </div>
                 
                 <div style="margin-bottom: 5px;">
@@ -97,13 +166,19 @@
                 
                 <div style="margin-bottom: 5px;">
                     <label style="display: block; margin-bottom: 5px; font-size: 12px; color: var(--text-gray);">Password</label>
-                    <input type="password" class="auth-input" placeholder="••••••••" required>
+                    <div class="password-wrapper">
+                        <input type="password" class="auth-input" placeholder="••••••••" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
                     <div class="strength-meter"><div class="strength-bar"></div></div>
                 </div>
                 
                 <div style="margin-bottom: 5px;">
                     <label style="display: block; margin-bottom: 5px; font-size: 12px; color: var(--text-gray);">Confirm Password</label>
-                    <input type="password" class="auth-input" placeholder="••••••••" required>
+                    <div class="password-wrapper">
+                        <input type="password" class="auth-input" placeholder="••••••••" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
                 </div>
                 
                 <label style="color: var(--text-gray); display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 12px; margin: 15px 0 25px;">
@@ -111,6 +186,20 @@
                 </label>
                 
                 <button type="submit" class="btn-primary" style="width: 100%; padding: 15px;">Create Account</button>
+                
+                <div style="text-align: center; margin: 30px 0; position: relative;">
+                    <span style="background: var(--bg-light); padding: 0 15px; position: relative; z-index: 1; color: var(--text-gray); font-size: 12px;">OR CONTINUE WITH</span>
+                    <hr style="position: absolute; top: 50%; width: 100%; border: none; border-top: 1px solid var(--glass-border);">
+                </div>
+                
+                <div class="social-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <a href="#" class="btn-outline" style="font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; text-transform: uppercase;">
+                        <i class="fab fa-google"></i> Google
+                    </a>
+                    <a href="#" class="btn-outline" style="font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; text-transform: uppercase;">
+                        <i class="fab fa-apple"></i> Apple
+                    </a>
+                </div>
                 
                 <p style="text-align: center; margin-top: 30px; font-size: 14px; color: var(--text-gray);">
                     Already a member? <a href="login.html" style="color: var(--secondary-neon); text-decoration: none; font-weight: 700;">Login</a>
@@ -124,5 +213,13 @@
     <script>
         document.body.classList.add('loaded');
     </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
 </html>
+
+
+

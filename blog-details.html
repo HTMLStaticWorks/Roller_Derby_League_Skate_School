@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Details | Roller Derby League & Skate School</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=1">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
@@ -26,11 +27,20 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+                <li class="mobile-menu-controls">
+                    <button class="toggle-btn dark-mode-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="toggle-btn rtl-toggle" title="Toggle RTL">
+                        <i class="fas fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn-primary">Login</a>
+                </li>
             </ul>
             <div class="nav-controls">
                 <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
-                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-right-left"></i></button>
+                <a href="login.html" class="btn-primary" style="padding: 8px 20px; font-size: 12px; margin-left: 5px;">Login</a>
                 <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
             </div>
         </div>
@@ -39,10 +49,10 @@
     <!-- 1. Featured Banner -->
     <section class="hero" style="height: 60vh;">
         <div class="hero-overlay"></div>
-        <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=1920" alt="Article Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=1920" alt="Blog Details Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
         <div class="container hero-content" data-reveal>
             <span style="color: var(--secondary-neon); font-weight: 800; text-transform: uppercase;">Strategy</span>
-            <h1 class="hero-title" style="font-size: 50px;">MASTERING THE <span class="neon-text">POWER JAM</span></h1>
+            <h1 class="hero-title">MASTERING THE <span class="neon-text">POWER JAM</span></h1>
             <p class="hero-subtitle">By Coach Velocity | May 10, 2026</p>
         </div>
     </section>
@@ -51,21 +61,24 @@
     <section class="section-padding">
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto;">
-                <div data-reveal>
+                <div data-reveal id="post-image-container" style="margin-bottom: 40px; border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <img src="" id="post-main-image" style="width: 100%; height: 450px; object-fit: cover;">
+                </div>
+                <div id="post-content-area">
                     <p style="font-size: 18px; margin-bottom: 25px; line-height: 1.8;">A Power Jam occurs when the opposing jammer is sent to the penalty box, leaving your jammer as the only person on the track who can score points. This is the most critical time in a roller derby match and can often determine the outcome of the game.</p>
                     <p style="color: var(--text-gray); margin-bottom: 25px;">To maximize a Power Jam, your blockers must shift from a defensive mindset to an offensive one. Clearing a path for your jammer while preventing the opposing blockers from reformed walls is key.</p>
                     <h3 class="neon-text" style="margin-bottom: 20px;">1. CLEAR THE TRACK</h3>
                     <p style="color: var(--text-gray); margin-bottom: 25px;">Your blockers should identify the weakest point in the opposing wall and use coordinated blocks to open a lane. Communication is vital here; if the jammer sees a hole on the inside line, they need to call it out.</p>
-                </div>
 
-                <!-- 3. Quote Highlight -->
-                <div class="glass-card" style="margin: 40px 0; border-left: 5px solid var(--primary-neon); background: rgba(255,0,127,0.05);" data-reveal>
-                    <h2 style="font-style: italic; font-size: 24px; line-height: 1.4;">"Speed is important, but control is everything. In a power jam, a calm jammer is a scoring jammer."</h2>
-                </div>
+                    <!-- 3. Quote Highlight -->
+                    <div class="glass-card" style="margin: 40px 0; border-left: 5px solid var(--primary-neon); background: rgba(255,0,127,0.05);" data-reveal>
+                        <h2 style="font-style: italic; font-size: 24px; line-height: 1.4;">"Speed is important, but control is everything. In a power jam, a calm jammer is a scoring jammer."</h2>
+                    </div>
 
-                <div data-reveal>
-                    <h3 class="neon-text" style="margin-bottom: 20px;">2. RECYCLE THE BLOCKERS</h3>
-                    <p style="color: var(--text-gray); margin-bottom: 25px;">When you knock an opponent out of bounds, your blockers should "recycle" them by skating backward to force the opponent to re-enter the track behind you. This buys your jammer more time and space to complete laps.</p>
+                    <div data-reveal>
+                        <h3 class="neon-text" style="margin-bottom: 20px;">2. RECYCLE THE BLOCKERS</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 25px;">When you knock an opponent out of bounds, your blockers should "recycle" them by skating backward to force the opponent to re-enter the track behind you. This buys your jammer more time and space to complete laps.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,28 +96,28 @@
                     <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=400" alt="Related" style="width: 100%; height: 150px; object-fit: cover;">
                     <div style="padding: 15px;">
                         <h4 style="font-size: 16px; margin-bottom: 10px;">Choosing Wheels</h4>
-                        <a href="#" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
+                        <a href="#right-wheels" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
                     </div>
                 </div>
                 <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
-                    <img src="https://images.unsplash.com/photo-1551698618-1fed5d978244?auto=format&fit=crop&q=80&w=400" alt="Related" style="width: 100%; height: 150px; object-fit: cover;">
+                    <img src="assets/images/Off-Track Conditioning.png" alt="Off-Track Conditioning" style="width: 100%; height: 150px; object-fit: cover;">
                     <div style="padding: 15px;">
                         <h4 style="font-size: 16px; margin-bottom: 10px;">Off-Track Training</h4>
-                        <a href="#" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
+                        <a href="#conditioning" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
                     </div>
                 </div>
                 <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
-                    <img src="https://images.unsplash.com/photo-1543808096-2ac8ab04aa7a?auto=format&fit=crop&q=80&w=400" alt="Related" style="width: 100%; height: 150px; object-fit: cover;">
+                    <img src="assets/images/The Derby Community.png" alt="The Derby Community" style="width: 100%; height: 150px; object-fit: cover;">
                     <div style="padding: 15px;">
                         <h4 style="font-size: 16px; margin-bottom: 10px;">The Community</h4>
-                        <a href="#" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
+                        <a href="#community" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
                     </div>
                 </div>
                 <div class="glass-card" data-reveal style="padding: 0; overflow: hidden;">
                     <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=400" alt="Related" style="width: 100%; height: 150px; object-fit: cover;">
                     <div style="padding: 15px;">
                         <h4 style="font-size: 16px; margin-bottom: 10px;">Pro Interview</h4>
-                        <a href="#" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
+                        <a href="#power-jam" class="neon-text" style="font-size: 14px; text-decoration: none;">Read More</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +130,7 @@
             <div style="max-width: 800px; margin: 0 auto;" class="glass-card" data-reveal>
                 <h3 style="margin-bottom: 30px;">LEAVE A <span class="neon-text">COMMENT</span></h3>
                 <form>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div class="comment-form-row">
                         <input type="text" placeholder="Name" style="background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white;">
                         <input type="email" placeholder="Email" style="background: var(--bg-dark); border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px; color: white;">
                     </div>
@@ -137,23 +150,41 @@
                         <i class="fas fa-skating neon-text"></i>
                         ROLLER<span>DERBY</span>
                     </a>
-                    <p>The world's premier roller derby league and skate academy.</p>
+                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition and community since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="#">Fresh Meat Basics</a></li>
+                        <li><a href="#">Tactical Derby</a></li>
+                        <li><a href="#">Fitness & Conditioning</a></li>
+                        <li><a href="#">Private Coaching</a></li>
+                        <li><a href="#">Youth Academy</a></li>
                     </ul>
                 </div>
                 <div class="footer-newsletter">
-                    <h4>Social</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
+                    <h4>Newsletter</h4>
+                    <p>Get the latest match results and training tips directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn-primary" style="padding: 12px;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -163,5 +194,101 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        const blogPosts = {
+            'power-jam': {
+                title: 'MASTERING THE <span class="neon-text">POWER JAM</span>',
+                category: 'Strategy',
+                image: 'https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=1920',
+                author: 'Coach Velocity',
+                date: 'May 10, 2026',
+                content: `
+                    <p style="font-size: 18px; margin-bottom: 25px; line-height: 1.8;">A Power Jam occurs when the opposing jammer is sent to the penalty box, leaving your jammer as the only person on the track who can score points. This is the most critical time in a roller derby match and can often determine the outcome of the game.</p>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">To maximize a Power Jam, your blockers must shift from a defensive mindset to an offensive one. Clearing a path for your jammer while preventing the opposing blockers from reformed walls is key.</p>
+                    <h3 class="neon-text" style="margin-bottom: 20px;">1. CLEAR THE TRACK</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">Your blockers should identify the weakest point in the opposing wall and use coordinated blocks to open a lane. Communication is vital here; if the jammer sees a hole on the inside line, they need to call it out.</p>
+                `
+            },
+            'right-wheels': {
+                title: 'CHOOSING THE <span class="neon-text">RIGHT WHEELS</span>',
+                category: 'Gear',
+                image: 'https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=1920',
+                author: 'Gear Guru',
+                date: 'May 08, 2026',
+                content: `
+                    <p style="font-size: 18px; margin-bottom: 25px; line-height: 1.8;">Your wheels are your only contact point with the floor. Choosing the right durometer (hardness) can mean the difference between sliding out on a turn and sticking like glue.</p>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">Generally, softer wheels (88A-92A) are better for slippery polished concrete, while harder wheels (95A-99A) are ideal for sticky sports court or wood floors.</p>
+                    <h3 class="neon-text" style="margin-bottom: 20px;">1. FLOOR TEXTURE</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">Always test your grip during warm-ups. If you feel like you're skating through mud, go harder. If you can't hold your plow stops, go softer.</p>
+                `
+            },
+            'conditioning': {
+                title: 'OFF-TRACK <span class="neon-text">CONDITIONING</span>',
+                category: 'Training',
+                image: 'assets/images/Off-Track Conditioning.png',
+                author: 'Fitness Fanatic',
+                date: 'May 05, 2026',
+                content: `
+                    <p style="font-size: 18px; margin-bottom: 25px; line-height: 1.8;">Roller derby is a full-body sport that requires explosive power, balance, and core stability. What you do off the track is just as important as your time on wheels.</p>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">Focus on single-leg exercises like Bulgarian split squats and lateral lunges to mimic the stride and stability needed during a jam.</p>
+                    <h3 class="neon-text" style="margin-bottom: 20px;">1. CORE STABILITY</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">A strong core allows you to take hits and maintain your balance. Planks, Russian twists, and deadbugs should be staples in your routine.</p>
+                `
+            },
+            'community': {
+                title: 'THE DERBY <span class="neon-text">COMMUNITY</span>',
+                category: 'Lifestyle',
+                image: 'assets/images/The Derby Community.png',
+                author: 'Community Cap',
+                date: 'May 01, 2026',
+                content: `
+                    <p style="font-size: 18px; margin-bottom: 25px; line-height: 1.8;">Roller derby is more than just a sport; it's a global family. It provides a space for empowerment, self-expression, and radical inclusivity.</p>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">From local bouts to international championships, the "Derby Love" is felt everywhere. It's about supporting your teammates and your opponents alike.</p>
+                    <h3 class="neon-text" style="margin-bottom: 20px;">1. FIND YOUR LEAGUE</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;">Every league has its own culture. Whether you're looking for high-level competition or a recreational hobby, there's a place for you in the derby world.</p>
+                `
+            }
+        };
+
+        function updateBlogDetails() {
+            const hash = window.location.hash.substring(1);
+            const post = blogPosts[hash] || blogPosts['power-jam'];
+
+            if (post) {
+                // document.querySelector('.hero img').src = post.image; // Removed from hero
+                document.getElementById('post-main-image').src = post.image;
+                document.querySelector('.hero-content span').textContent = post.category;
+                document.querySelector('.hero-title').innerHTML = post.title;
+                document.querySelector('.hero-subtitle').textContent = `By ${post.author} | ${post.date}`;
+                document.getElementById('post-content-area').innerHTML = post.content;
+                
+                // Update Page Title
+                document.title = `${post.category} - ${hash.replace(/-/g, ' ').toUpperCase()} | Roller Derby`;
+                
+                // Re-trigger scroll reveal for new content
+                setTimeout(() => {
+                    const revealElements = document.querySelectorAll('[data-reveal]');
+                    revealElements.forEach(el => {
+                        const elTop = el.getBoundingClientRect().top;
+                        const windowHeight = window.innerHeight;
+                        if (elTop < windowHeight - 100) {
+                            el.classList.add('revealed');
+                        }
+                    });
+                }, 100);
+            }
+        }
+
+        window.addEventListener('hashchange', updateBlogDetails);
+        window.addEventListener('load', updateBlogDetails);
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
 </html>
+
+
+

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Roller Derby League & Skate School</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=1">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
@@ -67,20 +68,29 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+                <li class="mobile-menu-controls">
+                    <button class="toggle-btn dark-mode-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="toggle-btn rtl-toggle" title="Toggle RTL">
+                        <i class="fas fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn-primary">Login</a>
+                </li>
             </ul>
             <div class="nav-controls">
                 <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
-                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-right-left"></i></button>
+                <a href="login.html" class="btn-primary" style="padding: 8px 20px; font-size: 12px; margin-left: 5px;">Login</a>
                 <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </nav>
 
     <!-- 1. Hero Banner -->
-    <section class="hero" style="height: 60vh;">
+    <section class="hero" style="height: 75vh;">
         <div class="hero-overlay"></div>
-        <img src="https://images.unsplash.com/photo-1551698618-1fed5d978244?auto=format&fit=crop&q=80&w=1920" alt="About Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <img src="assets/images/about-hero.png" alt="" style="position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center;">
         <div class="container hero-content" data-reveal>
             <h1 class="hero-title">OUR <span class="neon-text">LEGACY</span></h1>
             <p class="hero-subtitle">Building a community of strength, speed, and sisterhood since 2010.</p>
@@ -172,7 +182,7 @@
     <!-- 4. Why Choose Our League -->
     <section class="section-padding">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+            <div class="why-us-grid">
                 <div data-reveal>
                     <h2 class="section-title">WHY <span class="neon-text">JOIN US?</span></h2>
                     <p style="color: var(--text-gray); margin-bottom: 30px;">We provide more than just a place to skate. We provide a platform for growth.</p>
@@ -201,40 +211,9 @@
                     </ul>
                 </div>
                 <div class="glass-card" style="padding: 0; overflow: hidden;" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=800" alt="Training" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Achievements & Awards -->
-    <section class="section-padding" style="background: rgba(0,242,255,0.02);">
-        <div class="container">
-            <div class="section-header" data-reveal>
-                <h2 class="section-title">OUR <span class="neon-text">AWARDS</span></h2>
-                <p class="section-subtitle">Recognized for excellence on and off the track.</p>
-            </div>
-            
-            <div class="roster-grid">
-                <div class="glass-card text-center" data-reveal>
-                    <i class="fas fa-trophy neon-text" style="font-size: 50px; margin-bottom: 20px;"></i>
-                    <h3>Champs 2024</h3>
-                    <p style="color: var(--text-gray);">Regional League Champions</p>
-                </div>
-                <div class="glass-card text-center" data-reveal>
-                    <i class="fas fa-medal neon-text" style="font-size: 50px; margin-bottom: 20px;"></i>
-                    <h3>Best Academy</h3>
-                    <p style="color: var(--text-gray);">Sports Excellence Award</p>
-                </div>
-                <div class="glass-card text-center" data-reveal>
-                    <i class="fas fa-star neon-text" style="font-size: 50px; margin-bottom: 20px;"></i>
-                    <h3>5 Star Rated</h3>
-                    <p style="color: var(--text-gray);">Community Choice Award</p>
-                </div>
-                <div class="glass-card text-center" data-reveal>
-                    <i class="fas fa-handshake neon-text" style="font-size: 50px; margin-bottom: 20px;"></i>
-                    <h3>Impact Award</h3>
-                    <p style="color: var(--text-gray);">Youth Development Recognition</p>
+                    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="assets/images/skate-video2.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
@@ -253,9 +232,7 @@
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -295,5 +272,13 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
 </html>
+
+
+

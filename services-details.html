@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Details | Roller Derby League & Skate School</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=1">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
@@ -26,11 +27,20 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+                <li class="mobile-menu-controls">
+                    <button class="toggle-btn dark-mode-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="toggle-btn rtl-toggle" title="Toggle RTL">
+                        <i class="fas fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn-primary">Login</a>
+                </li>
             </ul>
             <div class="nav-controls">
                 <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
-                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-right-left"></i></button>
+                <a href="login.html" class="btn-primary" style="padding: 8px 20px; font-size: 12px; margin-left: 5px;">Login</a>
                 <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
             </div>
         </div>
@@ -39,27 +49,27 @@
     <!-- 1. Detailed Hero -->
     <section class="hero" style="height: 40vh;">
         <div class="hero-overlay"></div>
-        <img src="https://images.unsplash.com/photo-1551698618-1fed5d978244?auto=format&fit=crop&q=80&w=1920" alt="Service Detail Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <img src="assets/images/service-hero.png" alt="Service Detail Hero" id="hero-img" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
         <div class="container hero-content" data-reveal>
-            <h1 class="hero-title" style="font-size: 50px;">FRESH <span class="neon-text">MEAT</span> BASICS</h1>
-            <p class="hero-subtitle">The foundation of every great derby athlete.</p>
+            <h1 class="hero-title" id="hero-title" style="font-size: 50px;">FRESH <span class="neon-text">MEAT</span> BASICS</h1>
+            <p class="hero-subtitle" id="hero-subtitle">The foundation of every great derby athlete.</p>
         </div>
     </section>
 
     <!-- 2. Training Overview -->
     <section class="section-padding">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start;">
+            <div class="overview-grid">
                 <div data-reveal>
-                    <h2 class="section-title">PROGRAM <span class="neon-text">OVERVIEW</span></h2>
-                    <p style="color: var(--text-gray); margin-bottom: 25px;">Our Fresh Meat program is designed for individuals who have never stepped on a pair of quad skates before. Over 12 weeks, we transform you into a confident skater ready for contact.</p>
-                    <p style="color: var(--text-gray); margin-bottom: 25px;">You'll learn the essential 27 minimum skills required by the WFTDA, including cross-overs, T-stops, transitions, and falling safely without injuring yourself or others.</p>
+                    <h2 class="section-title" id="overview-title">PROGRAM <span class="neon-text">OVERVIEW</span></h2>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;" id="description-1">Our Fresh Meat program is designed for individuals who have never stepped on a pair of quad skates before. Over 12 weeks, we transform you into a confident skater ready for contact.</p>
+                    <p style="color: var(--text-gray); margin-bottom: 25px;" id="description-2">You'll learn the essential 27 minimum skills required by the WFTDA, including cross-overs, T-stops, transitions, and falling safely without injuring yourself or others.</p>
                     <div class="glass-card" style="margin-top: 30px; border-left: 5px solid var(--primary-neon);">
-                        <p style="font-style: italic;">"The best decision I ever made. The coaches are patient and the community is incredible." - Jane Doe, 2025 Grad</p>
+                        <p style="font-style: italic;" id="testimonial">"The best decision I ever made. The coaches are patient and the community is incredible." - Jane Doe, 2025 Grad</p>
                     </div>
                 </div>
                 <div class="glass-card" style="padding: 0; overflow: hidden;" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1543808096-2ac8ab04aa7a?auto=format&fit=crop&q=80&w=800" alt="Training Image" style="width: 100%; height: 400px; object-fit: cover;">
+                    <img src="assets/images/meat.png" alt="Training Image" id="section-img" style="width: 100%; height: 400px; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -73,7 +83,7 @@
                 <p class="section-subtitle">A breakdown of our 12-week intensive curriculum.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            <div class="skills-grid">
                 <div class="glass-card" data-reveal>
                     <h3 style="color: var(--secondary-neon); margin-bottom: 15px;">Weeks 1-4</h3>
                     <ul style="list-style: none; color: var(--text-gray);">
@@ -178,36 +188,40 @@
                         <i class="fas fa-skating neon-text"></i>
                         ROLLER<span>DERBY</span>
                     </a>
-                    <p>The world's premier roller derby league and skate academy.</p>
+                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition and community since 2010.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Training</h4>
                     <ul>
-                        <li><a href="#">Fresh Meat</a></li>
-                        <li><a href="#">Defense</a></li>
-                        <li><a href="#">Jammer</a></li>
+                        <li><a href="#">Fresh Meat Basics</a></li>
+                        <li><a href="#">Tactical Derby</a></li>
+                        <li><a href="#">Fitness & Conditioning</a></li>
+                        <li><a href="#">Private Coaching</a></li>
+                        <li><a href="#">Youth Academy</a></li>
                     </ul>
                 </div>
                 <div class="footer-newsletter">
                     <h4>Newsletter</h4>
+                    <p>Get the latest match results and training tips directly in your inbox.</p>
                     <form class="newsletter-form">
                         <input type="email" placeholder="Your Email">
-                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i></button>
+                        <button type="submit" class="btn-primary" style="padding: 12px;"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
@@ -218,5 +232,77 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        const serviceData = {
+            'fresh-meat': {
+                heroImg: 'assets/images/service-hero.png',
+                heroTitle: 'FRESH <span class="neon-text">MEAT</span> BASICS',
+                heroSubtitle: 'The foundation of every great derby athlete.',
+                overviewTitle: 'PROGRAM <span class="neon-text">OVERVIEW</span>',
+                desc1: 'Our Fresh Meat program is designed for individuals who have never stepped on a pair of quad skates before. Over 12 weeks, we transform you into a confident skater ready for contact.',
+                desc2: 'You\'ll learn the essential 27 minimum skills required by the WFTDA, including cross-overs, T-stops, transitions, and falling safely without injuring yourself or others.',
+                testimonial: '"The best decision I ever made. The coaches are patient and the community is incredible." - Jane Doe, 2025 Grad',
+                sectionImg: 'assets/images/meat.png'
+            },
+            'defense-camp': {
+                heroImg: 'assets/images/Defense Camp.img',
+                heroTitle: 'DEFENSE <span class="neon-text">CAMP</span>',
+                heroSubtitle: 'Hold the line and stop the jammer.',
+                overviewTitle: 'STRATEGIC <span class="neon-text">DEFENSE</span>',
+                desc1: 'Master the art of the wall. This program focuses on lateral movement, heavy leaning, and communication to ensure no one gets through your defense.',
+                desc2: 'Learn specialized blocking techniques, positional play, and wall strategies that define pro-level defense.',
+                testimonial: '"I learned more about track awareness in one weekend than I did in a year of practice." - Block Hero, 2026 Participant',
+                sectionImg: 'assets/images/Defense Camp.img'
+            },
+            'jammer-school': {
+                heroImg: 'assets/images/jammer school .png',
+                heroTitle: 'JAMMER <span class="neon-text">SCHOOL</span>',
+                heroSubtitle: 'The speed and agility of a pro.',
+                overviewTitle: 'ELITE <span class="neon-text">SCORING</span>',
+                desc1: 'Become the ultimate point-scorer. Jammer school teaches you how to read the pack, find holes, and use your agility to dance around blockers.',
+                desc2: 'Focus on explosive speed, jump-cuts, and apex jumps to outmaneuver even the toughest defensive walls.',
+                testimonial: '"This school gave me the confidence to take on any pack. My point average doubled!" - Speed Demon, 2026 Grad',
+                sectionImg: 'assets/images/jammer school .png'
+            },
+            'youth-league': {
+                heroImg: 'assets/images/Youth League.png',
+                heroTitle: 'YOUTH <span class="neon-text">LEAGUE</span>',
+                heroSubtitle: 'Training the next generation.',
+                overviewTitle: 'JUNIOR <span class="neon-text">DERBY</span>',
+                desc1: 'A safe and fun environment for young skaters to learn the sport. We focus on teamwork, sportsmanship, and foundational skating skills.',
+                desc2: 'Building the future of derby through structured play and skill-building exercises tailored for kids aged 8-16.',
+                testimonial: '"My daughter loves her sessions. It\'s more than just skating; it\'s about confidence and team spirit." - Proud Parent',
+                sectionImg: 'assets/images/Youth League.png'
+            }
+        };
+
+        function updateContent() {
+            const hash = window.location.hash.substring(1);
+            const data = serviceData[hash] || serviceData['fresh-meat'];
+
+            document.getElementById('hero-img').src = data.heroImg;
+            document.getElementById('hero-title').innerHTML = data.heroTitle;
+            document.getElementById('hero-subtitle').textContent = data.heroSubtitle;
+            document.getElementById('overview-title').innerHTML = data.overviewTitle;
+            document.getElementById('description-1').textContent = data.desc1;
+            document.getElementById('description-2').textContent = data.desc2;
+            document.getElementById('testimonial').textContent = data.testimonial;
+            document.getElementById('section-img').src = data.sectionImg;
+            
+            // Re-run reveal animation if needed
+            if (window.reveal) window.reveal();
+        }
+
+        window.addEventListener('hashchange', updateContent);
+        window.addEventListener('DOMContentLoaded', updateContent);
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
 </html>
+
+
+

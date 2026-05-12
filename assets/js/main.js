@@ -4,6 +4,17 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Active Link Highlight
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
     // 1. Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -15,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 2. Dark Mode Toggle
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const darkModeToggles = document.querySelectorAll('.dark-mode-toggle, #dark-mode-toggle');
     const body = document.body;
 
     // Check saved preference
@@ -25,23 +36,27 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.remove('dark-mode');
     }
 
-    darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const isDark = body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    darkModeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
     });
 
     // 3. RTL Toggle
-    const rtlToggle = document.getElementById('rtl-toggle');
+    const rtlToggles = document.querySelectorAll('.rtl-toggle, #rtl-toggle');
     const html = document.documentElement;
 
-    rtlToggle.addEventListener('click', () => {
-        const currentDir = html.getAttribute('dir');
-        if (currentDir === 'rtl') {
-            html.setAttribute('dir', 'ltr');
-        } else {
-            html.setAttribute('dir', 'rtl');
-        }
+    rtlToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const currentDir = html.getAttribute('dir');
+            if (currentDir === 'rtl') {
+                html.setAttribute('dir', 'ltr');
+            } else {
+                html.setAttribute('dir', 'rtl');
+            }
+        });
     });
 
     // 4. Mobile Menu
@@ -84,4 +99,45 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
         body.classList.add('loaded');
     });
+
+    // 8. Livestream Video Control (10s Loop)
+    const ninjaVideo = document.getElementById('ninja-video');
+    if (ninjaVideo) {
+        ninjaVideo.addEventListener('timeupdate', function() {
+            if (this.currentTime >= 10) {
+                this.currentTime = 0;
+                this.play();
+            }
+        });
+    }
+    // 9. Password Visibility Toggle
+    document.querySelectorAll('.toggle-password').forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const passwordInput = this.previousElementSibling;
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    });
+
+    // 10. Back to Top
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });

@@ -4,23 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | Roller Derby League & Skate School</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=1">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        .pricing-table-container {
+            background: var(--bg-card);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 50px;
+        }
         .pricing-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 50px;
         }
         .pricing-table th, .pricing-table td {
-            padding: 20px;
+            padding: 25px;
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            border: 1px solid var(--glass-border);
         }
-        .pricing-table th { background: rgba(255,255,255,0.05); color: var(--secondary-neon); text-transform: uppercase; }
-        .pricing-table tr:hover { background: rgba(255, 255, 255, 0.02); }
+        .pricing-table th { 
+            background: rgba(255, 255, 255, 0.08); 
+            color: var(--secondary-neon); 
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .pricing-table tr:hover td { 
+            background: rgba(255, 0, 127, 0.05); 
+            color: var(--text-white);
+        }
+        .status-yes { color: #00ff88; font-weight: bold; }
+        .status-no { color: #ff3d3d; font-weight: bold; opacity: 0.6; }
+        .status-highlight { color: var(--secondary-neon); font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .pricing-table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .pricing-table {
+                min-width: 700px;
+            }
+        }
     </style>
 </head>
 <body class="dark-mode">
@@ -40,20 +70,29 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="pricing.html" class="active">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn-primary" style="padding: 10px 20px;">Login</a></li>
+                <li class="mobile-menu-controls">
+                    <button class="toggle-btn dark-mode-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="toggle-btn rtl-toggle" title="Toggle RTL">
+                        <i class="fas fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn-primary">Login</a>
+                </li>
             </ul>
             <div class="nav-controls">
                 <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
-                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-language"></i></button>
+                <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-right-left"></i></button>
+                <a href="login.html" class="btn-primary" style="padding: 8px 20px; font-size: 12px; margin-left: 5px;">Login</a>
                 <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </nav>
 
     <!-- 1. Hero Banner -->
-    <section class="hero" style="height: 50vh;">
+    <section class="hero" style="height: 75vh;">
         <div class="hero-overlay"></div>
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1920" alt="Pricing Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <img src="assets/images/pricing-hero.png" alt="Pricing Hero" style="position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center;">
         <div class="container hero-content" data-reveal>
             <h1 class="hero-title">LEAGUE <span class="neon-text">PRICING</span></h1>
             <p class="hero-subtitle">Affordable plans for athletes and supporters alike.</p>
@@ -120,7 +159,7 @@
                 <p class="section-subtitle">Support local sports and reach a passionate audience.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            <div class="roster-grid" style="gap: 30px;">
                 <div class="glass-card" data-reveal>
                     <h3 style="color: #cd7f32;">Bronze</h3>
                     <h2 style="margin: 20px 0;">$500<span style="font-size: 14px; color: var(--text-gray);">/yr</span></h2>
@@ -136,6 +175,11 @@
                     <h2 style="margin: 20px 0;">$5000<span style="font-size: 14px; color: var(--text-gray);">/yr</span></h2>
                     <p style="color: var(--text-gray);">Full Arena branding & naming rights to one bout.</p>
                 </div>
+                <div class="glass-card" data-reveal style="border-color: #e5e4e2;">
+                    <h3 style="color: var(--text-white);">Platinum</h3>
+                    <h2 style="margin: 20px 0;">$10000<span style="font-size: 14px; color: var(--text-gray);">/yr</span></h2>
+                    <p style="color: var(--text-gray);">Title sponsorship for full season & national TV exposure.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -147,42 +191,44 @@
                 <h2 class="section-title">FEATURE <span class="neon-text">COMPARISON</span></h2>
             </div>
             
-            <table class="pricing-table" data-reveal>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Supporter</th>
-                        <th>Active</th>
-                        <th>Elite Pro</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Track Access</td>
-                        <td>None</td>
-                        <td>Unlimited</td>
-                        <td>Priority</td>
-                    </tr>
-                    <tr>
-                        <td>Coaching</td>
-                        <td>No</td>
-                        <td>Group</td>
-                        <td>Personal</td>
-                    </tr>
-                    <tr>
-                        <td>Match Tickets</td>
-                        <td>Discounted</td>
-                        <td>Free (1)</td>
-                        <td>VIP Access</td>
-                    </tr>
-                    <tr>
-                        <td>Voting Rights</td>
-                        <td>No</td>
-                        <td>Yes</td>
-                        <td>Yes</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="pricing-table-container" data-reveal>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Supporter</th>
+                            <th>Active</th>
+                            <th>Elite Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Track Access</td>
+                            <td class="status-no">None</td>
+                            <td class="status-yes"><i class="fas fa-infinity"></i> Unlimited</td>
+                            <td class="status-highlight"><i class="fas fa-star"></i> Priority</td>
+                        </tr>
+                        <tr>
+                            <td>Coaching</td>
+                            <td class="status-no">No</td>
+                            <td class="status-highlight">Group</td>
+                            <td class="status-yes"><i class="fas fa-user-tie"></i> Personal</td>
+                        </tr>
+                        <tr>
+                            <td>Match Tickets</td>
+                            <td>Discounted</td>
+                            <td class="status-yes">Free (1)</td>
+                            <td class="status-highlight"><i class="fas fa-crown"></i> VIP Access</td>
+                        </tr>
+                        <tr>
+                            <td>Voting Rights</td>
+                            <td class="status-no"><i class="fas fa-times-circle"></i> No</td>
+                            <td class="status-yes"><i class="fas fa-check-circle"></i> Yes</td>
+                            <td class="status-yes"><i class="fas fa-check-circle"></i> Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
@@ -200,24 +246,45 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-logo">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
                         <i class="fas fa-skating neon-text"></i>
                         ROLLER<span>DERBY</span>
                     </a>
+                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition and community since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="#">Fresh Meat Basics</a></li>
+                        <li><a href="#">Tactical Derby</a></li>
+                        <li><a href="#">Fitness & Conditioning</a></li>
+                        <li><a href="#">Private Coaching</a></li>
+                        <li><a href="#">Youth Academy</a></li>
                     </ul>
                 </div>
                 <div class="footer-newsletter">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <h4>Newsletter</h4>
+                    <p>Get the latest match results and training tips directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn-primary" style="padding: 12px;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -227,5 +294,13 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
 </html>
+
+
+
