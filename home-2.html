@@ -66,6 +66,10 @@
             display: flex; flex-direction: column; justify-content: flex-end;
             padding: 20px;
             transition: var(--transition);
+            color: #ffffff; /* Force white text regardless of theme */
+        }
+        .bento-overlay h3, .bento-overlay p {
+            color: #ffffff !important;
         }
         .bento-item:hover .bento-overlay { background: rgba(255, 0, 127, 0.4); }
 
@@ -223,8 +227,8 @@
             flex-shrink: 0;
             min-width: 120px;
         }
-        .row-primary { color: rgba(255, 0, 127, 0.1); }
-        .row-secondary { color: rgba(0, 242, 255, 0.1); }
+        .row-primary { color: rgba(255, 0, 127, 0.5); }
+        .row-secondary { color: rgba(0, 242, 255, 0.5); }
         .row-content h3 {
             color: var(--primary-neon);
             margin-bottom: 10px;

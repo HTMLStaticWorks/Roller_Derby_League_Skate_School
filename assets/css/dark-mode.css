@@ -10,8 +10,8 @@ body.dark-mode {
     --bg-card: rgba(255, 255, 255, 0.05);
     --text-white: #ffffff;
     --text-dark: #121214;
-    --text-gray: #a0a0a0;
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-gray: #e0e0e0;
+    --glass-border: rgba(255, 255, 255, 0.2);
 }
 
 body:not(.dark-mode) {
@@ -20,8 +20,8 @@ body:not(.dark-mode) {
     --bg-card: rgba(0, 0, 0, 0.05);
     --text-white: #121214;
     --text-dark: #ffffff;
-    --text-gray: #555555;
-    --glass-border: rgba(0, 0, 0, 0.1);
+    --text-gray: #333333;
+    --glass-border: rgba(0, 0, 0, 0.15);
 }
 
 body:not(.dark-mode) .navbar.scrolled {
@@ -48,7 +48,7 @@ body:not(.dark-mode) .footer-newsletter h4 {
 body:not(.dark-mode) .footer-links ul li a,
 body:not(.dark-mode) .footer-logo p,
 body:not(.dark-mode) .footer-bottom {
-    color: #555555;
+    color: #333333;
 }
 
 body:not(.dark-mode) .hero-overlay {
@@ -58,4 +58,16 @@ body:not(.dark-mode) .hero-overlay {
 body:not(.dark-mode) .toggle-btn {
     color: #121214;
     border-color: rgba(0,0,0,0.1);
+}
+
+body:not(.dark-mode) .hamburger span {
+    background: #121214;
+}
+
+body:not(.dark-mode) .social-icons a {
+    color: #121214;
+}
+
+body:not(.dark-mode) .social-icons a:hover {
+    color: #ffffff;
 }
