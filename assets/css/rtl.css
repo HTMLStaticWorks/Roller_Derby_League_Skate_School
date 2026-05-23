@@ -38,3 +38,22 @@
 [dir="rtl"] .newsletter-form {
     flex-direction: row-reverse;
 }
+
+/* Ensure About page timeline and cards are properly mirrored in RTL */
+[dir="rtl"] .timeline .glass-card,
+[dir="rtl"] .timeline .glass-card * {
+    text-align: right;
+}
+
+[dir="rtl"] .timeline-item {
+    /* keep symmetric padding but ensure content reads right-to-left */
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .timeline-item {
+        padding-right: 70px;
+        padding-left: 25px;
+    }
+}
