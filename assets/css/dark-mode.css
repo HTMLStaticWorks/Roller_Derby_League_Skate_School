@@ -5,9 +5,10 @@
 */
 
 body.dark-mode {
-    --bg-dark: #050505;
+    --bg-dark: #000000;
     --bg-light: #ffffff;
     --bg-card: rgba(255, 255, 255, 0.05);
+    --bg-alt: #121214;
     --text-white: #ffffff;
     --text-dark: #121214;
     --text-gray: #e0e0e0;
@@ -15,9 +16,10 @@ body.dark-mode {
 }
 
 body:not(.dark-mode) {
-    --bg-dark: #f0f2f5;
+    --bg-dark: #ffffff;
     --bg-light: #ffffff;
     --bg-card: rgba(0, 0, 0, 0.05);
+    --bg-alt: #f0f2f5;
     --text-white: #121214;
     --text-dark: #ffffff;
     --text-gray: #333333;

@@ -49,6 +49,60 @@
             .timeline-item::after { left: 21px; }
             .right { left: 0%; }
         }
+
+        /* ── RTL Timeline Fix ── */
+        [dir="rtl"] .timeline::after {
+            left: auto;
+            right: 50%;
+            margin-left: 0;
+            margin-right: -1px;
+        }
+
+        /* In RTL: swap "left" items to the right half */
+        [dir="rtl"] .timeline-item.left {
+            left: auto;
+            right: 0;
+        }
+
+        /* In RTL: swap "right" items to the left half */
+        [dir="rtl"] .timeline-item.right {
+            left: 0;
+            right: auto;
+        }
+
+        /* In RTL: dot for "left" items moves to the left edge (toward centre line) */
+        [dir="rtl"] .timeline-item.left::after {
+            right: auto;
+            left: -10px;
+        }
+
+        /* In RTL: dot for "right" items moves to the right edge (toward centre line) */
+        [dir="rtl"] .timeline-item.right::after {
+            left: auto;
+            right: -10px;
+        }
+
+        /* RTL mobile: mirror the vertical single-column layout */
+        @media (max-width: 768px) {
+            [dir="rtl"] .timeline::after {
+                right: 31px;
+                left: auto;
+                margin-right: 0;
+            }
+            [dir="rtl"] .timeline-item {
+                padding-right: 70px;
+                padding-left: 25px;
+            }
+            [dir="rtl"] .timeline-item::after {
+                right: 21px;
+                left: auto;
+            }
+            [dir="rtl"] .timeline-item.left,
+            [dir="rtl"] .timeline-item.right {
+                right: 0;
+                left: auto;
+            }
+        }
     </style>
 </head>
 <body class="dark-mode">
@@ -139,7 +193,7 @@
     </section>
 
     <!-- 3. Meet The Coaches (4 cards) -->
-    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+    <section class="section-padding section-alt">
         <div class="container">
             <div class="section-header" data-reveal>
                 <h2 class="section-title">MEET THE <span class="neon-text">COACHES</span></h2>
