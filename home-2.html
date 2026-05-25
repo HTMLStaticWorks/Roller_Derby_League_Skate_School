@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home 2 | Roller Derby League & Skate School</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=1">
-    
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* Home 2 Specific Styles */
         .hero-split {
@@ -18,29 +19,36 @@
             height: 100vh;
             overflow: hidden;
         }
+
         .hero-left {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 80px;
+            padding: 150px 80px 80px 80px;
             background: var(--bg-dark);
             position: relative;
             z-index: 2;
         }
+
         .hero-right {
             flex: 1;
             position: relative;
         }
+
         .hero-right img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .hero-right::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: linear-gradient(to right, var(--bg-dark), transparent);
         }
 
@@ -50,52 +58,91 @@
             grid-template-rows: repeat(2, 250px);
             gap: 20px;
         }
+
         .bento-item {
             position: relative;
             border-radius: 20px;
             overflow: hidden;
         }
+
         .bento-item img {
-            width: 100%; height: 100%; object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: var(--transition);
         }
-        .bento-item:hover img { transform: scale(1.1); }
+
+        .bento-item:hover img {
+            transform: scale(1.1);
+        }
+
         .bento-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4);
-            display: flex; flex-direction: column; justify-content: flex-end;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             padding: 20px;
             transition: var(--transition);
-            color: #ffffff; /* Force white text regardless of theme */
+            color: #ffffff;
+            /* Force white text regardless of theme */
         }
-        .bento-overlay h3, .bento-overlay p {
+
+        .bento-overlay h3,
+        .bento-overlay p {
             color: #ffffff !important;
         }
-        .bento-item:hover .bento-overlay { background: rgba(255, 0, 127, 0.4); }
 
-        .item-lg { grid-column: span 2; grid-row: span 2; }
-        .item-md { grid-column: span 2; }
+        .bento-item:hover .bento-overlay {
+            background: rgba(255, 0, 127, 0.4);
+        }
+
+        .item-lg {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .item-md {
+            grid-column: span 2;
+        }
 
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
+
         .gallery-card {
             height: 350px;
             border-radius: 15px;
             overflow: hidden;
             position: relative;
         }
-        .gallery-card img { width: 100%; height: 100%; object-fit: cover; }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .stats-grid {
             display: flex;
             justify-content: space-between;
-            margin-top: 50px;
+            margin-top: 10px;
         }
-        .stat-item h2 { font-size: 48px; color: var(--secondary-neon); }
-        .stat-item p { color: var(--text-gray); }
+
+        .stat-item h2 {
+            font-size: 48px;
+            color: var(--secondary-neon);
+        }
+
+        .stat-item p {
+            color: var(--text-gray);
+        }
 
         /* Video Info Section Styles */
         .video-info-grid {
@@ -104,9 +151,11 @@
             gap: 80px;
             align-items: center;
         }
+
         .info-features {
             margin-top: 40px;
         }
+
         .feature-item {
             display: flex;
             align-items: center;
@@ -119,25 +168,29 @@
             border: 1px solid var(--glass-border);
             transition: var(--transition);
         }
+
         .feature-item:hover {
             transform: translateX(10px);
             background: rgba(255, 0, 127, 0.1);
             border-color: var(--primary-neon);
         }
+
         .video-wrapper {
             position: relative;
             padding: 0;
             border-radius: 30px;
             overflow: hidden;
             line-height: 0;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             border: 1px solid var(--glass-border);
         }
+
         .info-video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .community-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -148,17 +201,20 @@
             background: var(--bg-card);
             backdrop-filter: blur(15px);
         }
+
         .community-item {
             display: flex;
             flex-direction: column;
             background: transparent;
         }
+
         .community-img {
             width: 100%;
             height: 280px;
             object-fit: cover;
             display: block;
         }
+
         .community-info {
             padding: 30px;
             text-align: center;
@@ -168,19 +224,48 @@
             align-items: center;
             border-right: 1px solid var(--glass-border);
         }
-        .community-info h3 { margin-bottom: 15px; font-size: 20px; }
-        .community-info p { color: var(--text-gray); font-size: 14px; margin-bottom: 25px; flex: 1; }
-        .community-btn { padding: 10px 25px; font-size: 12px; border-radius: 50px; }
-        .community-info.no-border { border-right: none; }
+
+        .community-info h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .community-info p {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .community-btn {
+            padding: 10px 25px;
+            font-size: 12px;
+            border-radius: 50px;
+        }
+
+        .community-info.no-border {
+            border-right: none;
+        }
 
         @media (max-width: 1024px) {
-            .community-grid { grid-template-columns: repeat(2, 1fr); }
-            .community-info { border-right: none; border-bottom: 1px solid var(--glass-border); }
-            .community-info.no-border { border-bottom: none; }
+            .community-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .community-info {
+                border-right: none;
+                border-bottom: 1px solid var(--glass-border);
+            }
+
+            .community-info.no-border {
+                border-bottom: none;
+            }
         }
 
         @media (max-width: 640px) {
-            .community-grid { grid-template-columns: 1fr; }
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .video-accent {
@@ -196,14 +281,49 @@
         }
 
         @media (max-width: 1024px) {
-            .hero-split { flex-direction: column; height: auto; overflow: visible; }
-            .hero-left { padding: 40px 20px 60px; order: 2; height: auto; text-align: center; }
-            .hero-right { height: 50vh; order: 1; }
-            .stats-grid { flex-direction: column; gap: 30px; align-items: center; }
-            .hero-left div:has(.btn-primary) { text-align: center; }
-            .bento-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
-            .item-lg, .item-md { grid-column: span 2; height: 300px; }
-            .video-info-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero-split {
+                flex-direction: column;
+                height: auto;
+                overflow: visible;
+            }
+
+            .hero-left {
+                padding: 40px 20px 60px;
+                order: 2;
+                height: auto;
+                text-align: center;
+            }
+
+            .hero-right {
+                height: 50vh;
+                order: 1;
+            }
+
+            .stats-grid {
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+            }
+
+            .hero-left div:has(.btn-primary) {
+                text-align: center;
+            }
+
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .item-lg,
+            .item-md {
+                grid-column: span 2;
+                height: 300px;
+            }
+
+            .video-info-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }
 
         .info-list {
@@ -212,6 +332,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .info-row {
             display: flex;
             align-items: center;
@@ -219,7 +340,11 @@
             padding: 40px 0;
             border-bottom: 1px solid var(--glass-border);
         }
-        .info-row.no-border { border-bottom: none; }
+
+        .info-row.no-border {
+            border-bottom: none;
+        }
+
         .row-number {
             font-size: 80px;
             font-weight: 900;
@@ -227,15 +352,26 @@
             flex-shrink: 0;
             min-width: 120px;
         }
-        .row-primary { color: rgba(255, 0, 127, 0.5); }
-        .row-secondary { color: rgba(0, 242, 255, 0.5); }
+
+        .row-primary {
+            color: rgba(255, 0, 127, 0.5);
+        }
+
+        .row-secondary {
+            color: rgba(0, 242, 255, 0.5);
+        }
+
         .row-content h3 {
             color: var(--primary-neon);
             margin-bottom: 10px;
             font-size: 28px;
             letter-spacing: 2px;
         }
-        .row-content h3.secondary { color: var(--secondary-neon); }
+
+        .row-content h3.secondary {
+            color: var(--secondary-neon);
+        }
+
         .row-content p {
             color: var(--text-gray);
             font-size: 18px;
@@ -249,20 +385,45 @@
                 gap: 20px;
                 padding: 30px 0;
             }
-            .row-number { font-size: 60px; min-width: auto; }
-            .row-content h3 { font-size: 24px; }
-            .row-content p { font-size: 16px; }
+
+            .row-number {
+                font-size: 60px;
+                min-width: auto;
+            }
+
+            .row-content h3 {
+                font-size: 24px;
+            }
+
+            .row-content p {
+                font-size: 16px;
+            }
         }
 
         @media (max-width: 320px) {
-            .hero-title { font-size: 32px; }
-            .hero-left { padding: 30px 20px 50px; }
-            .stat-item h2 { font-size: 36px; }
-            .hero-right { height: 40vh; }
-            .row-number { font-size: 50px; }
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-left {
+                padding: 30px 20px 50px;
+            }
+
+            .stat-item h2 {
+                font-size: 36px;
+            }
+
+            .hero-right {
+                height: 40vh;
+            }
+
+            .row-number {
+                font-size: 50px;
+            }
         }
     </style>
 </head>
+
 <body class="dark-mode">
 
     <!-- Navbar -->
@@ -272,7 +433,7 @@
                 <i class="fas fa-skating neon-text"></i>
                 ROLLER<span>DERBY</span>
             </a>
-            
+
             <ul class="nav-links">
                 <li><a href="index.html">Home 1</a></li>
                 <li><a href="home-2.html" class="active">Home 2</a></li>
@@ -295,7 +456,8 @@
             <div class="nav-controls">
                 <button class="toggle-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
                 <button class="toggle-btn" id="rtl-toggle"><i class="fas fa-right-left"></i></button>
-                <a href="login.html" class="btn-primary" style="padding: 8px 20px; font-size: 12px; margin-left: 5px;">Login</a>
+                <a href="login.html" class="btn-primary"
+                    style="padding: 8px 20px; font-size: 12px; margin-left: 5px;">Login</a>
                 <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
             </div>
         </div>
@@ -304,19 +466,31 @@
     <!-- 1. Premium Hero Section -->
     <header class="hero-split">
         <div class="hero-left" data-reveal>
-            <h1 class="hero-title">THE <span class="neon-text">ELITE</span><br><span class="gradient-text">EXPERIENCE</span></h1>
-            <p class="hero-subtitle">Step into the most technologically advanced roller derby training ground in the world. Precision, Power, Performance.</p>
+            <h1 class="hero-title">THE <span class="neon-text">ELITE</span><br><span
+                    class="gradient-text">EXPERIENCE</span></h1>
+            <p class="hero-subtitle">Step into the most technologically advanced roller derby training ground in the
+                world. Precision, Power, Performance.</p>
             <div class="stats-grid">
-                <div class="stat-item"><h2>15+</h2><p>Pro Leagues</p></div>
-                <div class="stat-item"><h2>500+</h2><p>Athletes</p></div>
-                <div class="stat-item"><h2>25+</h2><p>Awards</p></div>
+                <div class="stat-item">
+                    <h2>15+</h2>
+                    <p>Pro Leagues</p>
+                </div>
+                <div class="stat-item">
+                    <h2>500+</h2>
+                    <p>Athletes</p>
+                </div>
+                <div class="stat-item">
+                    <h2>25+</h2>
+                    <p>Awards</p>
+                </div>
             </div>
             <div style="margin-top: 40px;">
                 <a href="#" class="btn-primary">Explore Academy</a>
             </div>
         </div>
         <div class="hero-right">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1920" alt="Premium Skater">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1920"
+                alt="Premium Skater">
         </div>
     </header>
 
@@ -327,10 +501,11 @@
                 <h2 class="section-title">SKATE SCHOOL <span class="neon-text">EXPERIENCE</span></h2>
                 <p class="section-subtitle">A multidisciplinary approach to mastering the wheels.</p>
             </div>
-            
+
             <div class="bento-grid">
                 <div class="bento-item item-lg" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=800" alt="Tech">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=800"
+                        alt="Tech">
                     <div class="bento-overlay">
                         <h3>Technical Mastery</h3>
                         <p>Deep dive into the physics of skating.</p>
@@ -338,11 +513,15 @@
                 </div>
                 <div class="bento-item" data-reveal>
                     <img src="assets/images/Arena Access.png" alt="Arena">
-                    <div class="bento-overlay"><h3>Arena Access</h3></div>
+                    <div class="bento-overlay">
+                        <h3>Arena Access</h3>
+                    </div>
                 </div>
                 <div class="bento-item" data-reveal>
                     <img src="assets/images/Pro Community.png" alt="Community">
-                    <div class="bento-overlay"><h3>Pro Community</h3></div>
+                    <div class="bento-overlay">
+                        <h3>Pro Community</h3>
+                    </div>
                 </div>
                 <div class="bento-item item-md" data-reveal>
                     <img src="assets/images/Athlete Nutrition.png" alt="Nutrition">
@@ -361,8 +540,10 @@
             <div class="video-info-grid">
                 <div class="info-content" data-reveal>
                     <h2 class="section-title">SKATING <span class="neon-text">MASTERY</span></h2>
-                    <p style="color: var(--text-gray); font-size: 18px; margin-bottom: 30px;">Experience the thrill of the track. Our advanced training programs focus on precision, speed, and strategic gameplay to turn enthusiasts into elite athletes.</p>
-                    
+                    <p style="color: var(--text-gray); font-size: 18px; margin-bottom: 30px;">Experience the thrill of
+                        the track. Our advanced training programs focus on precision, speed, and strategic gameplay to
+                        turn enthusiasts into elite athletes.</p>
+
                     <div class="info-features">
                         <div class="feature-item" data-reveal>
                             <i class="fas fa-bolt neon-text" style="font-size: 20px;"></i>
@@ -377,10 +558,10 @@
                             <span>Tactical Awareness</span>
                         </div>
                     </div>
-                    
+
                     <a href="services.html" class="btn-primary" style="margin-top: 20px;">Explore Programs</a>
                 </div>
-                
+
                 <div class="video-container" data-reveal>
                     <div class="video-wrapper">
                         <video autoplay muted loop class="info-video">
@@ -401,7 +582,7 @@
                 <h2 class="section-title">JOIN THE <span class="neon-text">COMMUNITY</span></h2>
                 <p class="section-subtitle">Beyond the track, we are a family of creators and athletes.</p>
             </div>
-            
+
             <div class="community-grid">
                 <!-- Fan Meetups -->
                 <div class="community-item" data-reveal>
@@ -414,7 +595,8 @@
                 </div>
                 <!-- Gear Workshops -->
                 <div class="community-item" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=600" alt="Workshops" class="community-img">
+                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=600"
+                        alt="Workshops" class="community-img">
                     <div class="community-info">
                         <h3>Gear Workshops</h3>
                         <p>Learn how to maintain and customize your skates for peak performance.</p>
@@ -423,7 +605,8 @@
                 </div>
                 <!-- Player Podcasts -->
                 <div class="community-item" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=600" alt="Podcasts" class="community-img">
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=600"
+                        alt="Podcasts" class="community-img">
                     <div class="community-info">
                         <h3>Player Podcasts</h3>
                         <p>Weekly insights into the lives and training of derby pros.</p>
@@ -450,47 +633,55 @@
                 <h2 class="section-title">ATHLETE <span class="neon-text">VOICES</span></h2>
                 <p class="section-subtitle">Real stories from the track.</p>
             </div>
-            
+
             <div class="roster-grid">
                 <div class="glass-card" data-reveal>
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                        <img src="https://i.pravatar.cc/150?u=1" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <img src="https://i.pravatar.cc/150?u=1" alt="User"
+                            style="width: 50px; height: 50px; border-radius: 50%;">
                         <div>
                             <h4 style="margin: 0;">Sarah J.</h4>
                             <p style="font-size: 12px; color: var(--secondary-neon);">Fresh Meat Grad</p>
                         </div>
                     </div>
-                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"The training here is intense but incredibly rewarding. I went from zero to jammer in just six months!"</p>
+                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"The training here is intense but
+                        incredibly rewarding. I went from zero to jammer in just six months!"</p>
                 </div>
                 <div class="glass-card" data-reveal>
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                        <img src="https://i.pravatar.cc/150?u=2" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <img src="https://i.pravatar.cc/150?u=2" alt="User"
+                            style="width: 50px; height: 50px; border-radius: 50%;">
                         <div>
                             <h4 style="margin: 0;">Mike D.</h4>
                             <p style="font-size: 12px; color: var(--secondary-neon);">Pro Blocker</p>
                         </div>
                     </div>
-                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"Best facility in the country. The floor grip is perfect and the coaches really know their stuff."</p>
+                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"Best facility in the country. The
+                        floor grip is perfect and the coaches really know their stuff."</p>
                 </div>
                 <div class="glass-card" data-reveal>
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                        <img src="https://i.pravatar.cc/150?u=3" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <img src="https://i.pravatar.cc/150?u=3" alt="User"
+                            style="width: 50px; height: 50px; border-radius: 50%;">
                         <div>
                             <h4 style="margin: 0;">Elena R.</h4>
                             <p style="font-size: 12px; color: var(--secondary-neon);">Youth Academy Parent</p>
                         </div>
                     </div>
-                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"My daughter has found her confidence through derby. The community here is so supportive."</p>
+                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"My daughter has found her
+                        confidence through derby. The community here is so supportive."</p>
                 </div>
                 <div class="glass-card" data-reveal>
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                        <img src="https://i.pravatar.cc/150?u=4" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <img src="https://i.pravatar.cc/150?u=4" alt="User"
+                            style="width: 50px; height: 50px; border-radius: 50%;">
                         <div>
                             <h4 style="margin: 0;">Toxie</h4>
                             <p style="font-size: 12px; color: var(--secondary-neon);">League Captain</p>
                         </div>
                     </div>
-                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"We don't just build skaters, we build leaders. This league changed my life."</p>
+                    <p style="font-style: italic; color: var(--text-gray); flex: 1;">"We don't just build skaters, we
+                        build leaders. This league changed my life."</p>
                 </div>
             </div>
         </div>
@@ -503,31 +694,37 @@
                 <h2 class="section-title">THE ANATOMY OF <span class="neon-text">A BOUT</span></h2>
                 <p class="section-subtitle">Understanding the game is the first step to mastering it.</p>
             </div>
-            
+
             <div class="info-list">
                 <div class="info-row" data-reveal>
                     <div class="row-number row-primary">01</div>
                     <div class="row-content">
                         <h3>THE JAMMER</h3>
-                        <p>The star on the helmet. Jammers are the point-scorers, sprinting through the pack and gaining points for every opposing blocker they pass. Speed, agility, and endurance are their primary weapons.</p>
+                        <p>The star on the helmet. Jammers are the point-scorers, sprinting through the pack and gaining
+                            points for every opposing blocker they pass. Speed, agility, and endurance are their primary
+                            weapons.</p>
                     </div>
                 </div>
                 <div class="info-row" data-reveal>
                     <div class="row-number row-secondary">02</div>
                     <div class="row-content">
                         <h3 class="secondary">THE BLOCKERS</h3>
-                        <p>The wall of defense. Four blockers from each team work together to stop the opposing jammer while simultaneously helping their own jammer through. It's a high-speed game of physical chess.</p>
+                        <p>The wall of defense. Four blockers from each team work together to stop the opposing jammer
+                            while simultaneously helping their own jammer through. It's a high-speed game of physical
+                            chess.</p>
                     </div>
                 </div>
                 <div class="info-row no-border" data-reveal>
                     <div class="row-number row-primary">03</div>
                     <div class="row-content">
                         <h3>THE PIVOT</h3>
-                        <p>The strategist. Recognizable by the stripe on their helmet, the pivot is a blocker who can take over the jammer role if needed. They lead the pack and coordinate the defensive formations on the fly.</p>
+                        <p>The strategist. Recognizable by the stripe on their helmet, the pivot is a blocker who can
+                            take over the jammer role if needed. They lead the pack and coordinate the defensive
+                            formations on the fly.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div style="text-align: center; margin-top: 60px;" data-reveal>
                 <a href="services.html" class="btn-primary">Learn More Rules</a>
             </div>
@@ -544,7 +741,8 @@
                         <i class="fas fa-skating neon-text"></i>
                         ROLLER<span>DERBY</span>
                     </a>
-                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition and community since 2010.</p>
+                    <p>The world's premier roller derby league and skate academy. Empowering skaters through competition
+                        and community since 2010.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -577,7 +775,8 @@
                     <p>Get the latest match results and training tips directly in your inbox.</p>
                     <form class="newsletter-form">
                         <input type="email" placeholder="Your Email">
-                        <button type="submit" class="btn-primary" style="padding: 12px;"><i class="fas fa-paper-plane"></i></button>
+                        <button type="submit" class="btn-primary" style="padding: 12px;"><i
+                                class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
@@ -594,7 +793,5 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 </body>
+
 </html>
-
-
-

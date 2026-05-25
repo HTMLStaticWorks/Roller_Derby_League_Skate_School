@@ -12,7 +12,7 @@ body.dark-mode {
     --text-white: #ffffff;
     --text-dark: #121214;
     --text-gray: #e0e0e0;
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.5);
 }
 
 body:not(.dark-mode) {

@@ -20,7 +20,7 @@
     --text-white: #ffffff;
     --text-dark: #121214;
     --text-gray: #e0e0e0;
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.5);
     --transition: all 0.3s ease-in-out;
     --container-width: 1300px;
 }
@@ -81,9 +81,26 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 500;
 }
 
 .neon-text {
@@ -95,6 +112,7 @@ h6 {
 .gradient-text {
     background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
